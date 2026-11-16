@@ -1,11 +1,11 @@
 """DAILY workflow: ingest new pricing as it becomes available. Owner only. Use the SYSTEM Python (Bloomberg for rosters, a Databricks login, Quantifi for pricing).
 
-    python pricing/daily/update.py                 # pull new dates for all 40 indices, price only the new points, report what is still unpriced
-    python pricing/daily/update.py HY47 IG47       # only some indices
-    python pricing/daily/update.py --no-price      # just pull (e.g. no Quantifi available)
-    python pricing/daily/update.py --no-addin      # skip the Markit add-in step (e.g. Excel / the Markit login is not available)
+    python data_pipeline/daily/update.py                 # pull new dates for all 40 indices, price only the new points, report what is still unpriced
+    python data_pipeline/daily/update.py HY47 IG47       # only some indices
+    python data_pipeline/daily/update.py --no-price      # just pull (e.g. no Quantifi available)
+    python data_pipeline/daily/update.py --no-addin      # skip the Markit add-in step (e.g. Excel / the Markit login is not available)
 
-THE TWO DAILY STEPS:   1) python pricing/daily/update.py     2) python pricing/shared/publish.py
+THE TWO DAILY STEPS:   1) python data_pipeline/daily/update.py     2) python data_pipeline/shared/publish.py
 
 Steps (all write only the working store cache/base, nothing is published):
   1. cdx_store.update_store: fetch Databricks rows from (latest stored date - 7 days) on, replace that overlap, rebuild each index's members x dates grid. A newest date that
@@ -15,9 +15,9 @@ Steps (all write only the working store cache/base, nothing is published):
      days for the instruments already cached (addin_fill.pull extends them) and any never pulled, then addin_fill.assemble_new (incremental: ~1 minute, not the ~12 of a full assemble).
      If Excel / the login is not available it says so and carries on; run the add-in pieces later (addin_fill.py pull, assemble-new).
   4. Re-apply the standing overrides in config/overrides.csv (overrides.py; they only fill cells with no price, so a rule such as COMM at a flat 50 bp keeps covering new days).
-  5. Report the new dates: cells priced by Databricks, by the add-in, by an override, and every (name, index) still open, with what to do: a review sheet (pricing/fix_history/review.py
+  5. Report the new dates: cells priced by Databricks, by the add-in, by an override, and every (name, index) still open, with what to do: a review sheet (data_pipeline/fix_history/review.py
      make <TICKER>) for a name that needs a hand estimate.
-Then run `python pricing/shared/publish.py` (it keeps the previous published store in data/_previous). This step is separate from pricing/fix_history/, which repairs OLD missing data; see
+Then run `python data_pipeline/shared/publish.py` (it keeps the previous published store in data/_previous). This step is separate from data_pipeline/fix_history/, which repairs OLD missing data; see
 CLAUDE.md for the planned base / live split that will stop this step touching old dates.
 """
 import sys
@@ -76,7 +76,7 @@ def addin_step():
         return True
     except Exception as e:
         print(f'\nADD-IN STEP DID NOT RUN ({type(e).__name__}: {str(e)[:160]}).\n  Names Databricks does not price will show as open below. When Excel and the Markit login are available run:'
-              '\n    python pricing/fix_history/addin_fill.py pull\n    python pricing/fix_history/addin_fill.py assemble-new')
+              '\n    python data_pipeline/fix_history/addin_fill.py pull\n    python data_pipeline/fix_history/addin_fill.py assemble-new')
         return False
 
 
@@ -88,7 +88,7 @@ def overrides_step():
         if ov.SRC.exists():
             ov.price_overrides()
     except Exception as e:
-        print(f'\nOVERRIDES STEP DID NOT RUN ({type(e).__name__}: {str(e)[:160]}); run: python pricing/fix_history/overrides.py')
+        print(f'\nOVERRIDES STEP DID NOT RUN ({type(e).__name__}: {str(e)[:160]}); run: python data_pipeline/fix_history/overrides.py')
 
 
 def ingest_new(index_names=None, price=True, addin=True):
@@ -135,8 +135,8 @@ def report(since):
     g = (bad.groupby(['market_cds_ticker']).agg(name=('member_name', 'first'), cells=('index_name', 'size'), indices=('index_name', lambda x: ', '.join(sorted(set(x)))),
                                               first=('published_date', 'min'), last=('published_date', 'max')).sort_values('cells', ascending=False))
     print(g.to_string())
-    print('\nstill open: a name that stays open has no Databricks or add-in price. If it matters, estimate it with a review sheet (python pricing/fix_history/review.py make <TICKER>).'
-          '\nNext: python pricing/shared/publish.py')
+    print('\nstill open: a name that stays open has no Databricks or add-in price. If it matters, estimate it with a review sheet (python data_pipeline/fix_history/review.py make <TICKER>).'
+          '\nNext: python data_pipeline/shared/publish.py')
 
 
 if __name__ == '__main__':

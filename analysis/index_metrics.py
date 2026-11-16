@@ -11,7 +11,7 @@ Needs no Quantifi Toolkit, so it runs in the project .venv.
 
 DEFAULTED NAMES. Bloomberg's roster drops a defaulted name (weight 0), so the store never held it. teams.structured_credit_abhutra.credit_events says when each one left a series
 (index_ex_date). Such a name stays in its series at its original weight, with its own Databricks prices, up to the day before index_ex_date, and drops out from then on. The owner caches the
-events and those prices with pricing/fix_history/defaulted.py (needs a Databricks login); without that cache the metrics fall back to the live roster only.
+events and those prices with data_pipeline/fix_history/defaulted.py (needs a Databricks login); without that cache the metrics fall back to the live roster only.
 """
 import numpy as np
 import pandas as pd
@@ -26,7 +26,7 @@ DEFAULTED_FILE = cs.REF_DIR / 'defaulted_prices.parquet'
 DEFAULTED_FILL_FILE = cs.PRICES_DIR / 'addin_fill_defaulted.parquet'
 
 
-# ---- defaulted names (refresh_defaulted, which WRITES the cache, lives in pricing/fix_history/defaulted.py) --------------------------------------
+# ---- defaulted names (refresh_defaulted, which WRITES the cache, lives in data_pipeline/fix_history/defaulted.py) --------------------------------------
 def _defaulted(index_name):
     """Defaulted members of a series: DataFrame(market_cds_ticker, ex_date) and their cached prices, or empty frames if refresh_defaulted() has not been run."""
     if not (EVENTS_FILE.exists() and DEFAULTED_FILE.exists()):
@@ -71,7 +71,7 @@ def name_el(index_name, manual=True):
         d['source'] = d['source'].fillna('')
         d = d.assign(member_name=d['market_cds_ticker'] + ' (defaulted)', cds_maturity=cs.get_index_maturity(index_name), weight=std_w, defaulted=True).drop(columns='ex_date')
         el = pd.concat([el, d[el.columns]], ignore_index=True)
-    mo = cs._load_manual() if manual else None      # manual=False: the picture WITHOUT the overrides (pricing/fix_history uses it to see what is still a gap)
+    mo = cs._load_manual() if manual else None      # manual=False: the picture WITHOUT the overrides (data_pipeline/fix_history uses it to see what is still a gap)
     if mo is not None:         # a manual override beats every other source for the cells it lists
         m = mo.loc[mo['index_name'] == index_name, ['market_cds_ticker', 'published_date', 'cds_maturity', 'all_upfront']].rename(columns={'all_upfront': 'el_mo'})
         el = el.merge(m, on=['market_cds_ticker', 'published_date', 'cds_maturity'], how='left')
@@ -120,7 +120,7 @@ def index_metrics(index_name, top_ns=TOP_N, ddof=DDOF, el=None):
 
 def all_index_metrics(index_names=None, out_file=None):
     """index_metrics for every index (or the given ones), stacked (exactly one row per index and date). Writes parquet only if out_file is given
-    (pricing/shared/publish.py does that; the analysis side never writes into data/)."""
+    (data_pipeline/shared/publish.py does that; the analysis side never writes into data/)."""
     names = list(index_names) if index_names else list(cs.load_index_list()['index_name'])
     out = pd.concat([index_metrics(n) for n in names], ignore_index=True)
     assert not out.duplicated(['index_name', 'published_date']).any()

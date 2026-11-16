@@ -7,7 +7,7 @@ that workbook. Existing workbooks and app settings are never touched. Needs the 
     from bbg_bql import debt_for_cds_tickers, bql
     debt_for_cds_tickers(['MPW', 'ACI'])          # keyed on market_cds_ticker (CDS_Ticker in cds_mappings_final.csv)
     bql("debt('MPT US Equity', issuedby='CAST_PARENT_SUBS')", FIELDS)
-CLI: python pricing/shared/bbg_bql.py MPW ACI
+CLI: python data_pipeline/shared/bbg_bql.py MPW ACI
 """
 import sys
 import time

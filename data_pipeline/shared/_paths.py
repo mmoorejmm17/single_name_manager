@@ -15,10 +15,10 @@ DATA = ROOT / 'data' / 'base'           # the published store
 
 os.environ['CDS_DATA_DIR'] = str(STORE)
 os.environ['CDS_CONFIG_DIR'] = str(CONFIG)
-for _p in (ROOT / "analysis", ROOT / "pricing" / "shared", ROOT / "pricing" / "fix_history", ROOT / "pricing" / "daily"):
+for _p in (ROOT / "analysis", ROOT / "data_pipeline" / "shared", ROOT / "data_pipeline" / "fix_history", ROOT / "data_pipeline" / "daily"):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
 _cs = sys.modules.get('cdx_spreads')
 if _cs is not None and Path(_cs.DATA_DIR).resolve() != STORE.resolve():
-    raise RuntimeError('cdx_spreads was imported before pricing/_paths.py and points at the published data/; import _paths first (restart the kernel).')
+    raise RuntimeError('cdx_spreads was imported before data_pipeline/_paths.py and points at the published data/; import _paths first (restart the kernel).')

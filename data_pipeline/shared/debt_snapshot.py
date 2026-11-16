@@ -1,7 +1,7 @@
 """Snapshot of every CDS name's debt (bonds, loans, RCFs) from Bloomberg BQL, and a diff against the previous snapshot. System Python, needs a running Excel with Bloomberg (see bbg_bql.py).
 
-    python pricing/shared/debt_snapshot.py run [--limit N]     # query the whole mappings universe -> cache/debt/debt_YYYY-MM-DD.parquet (resumable: finished batches are kept)
-    python pricing/shared/debt_snapshot.py diff                # newest snapshot vs the one before it (added / removed / changed securities)
+    python data_pipeline/shared/debt_snapshot.py run [--limit N]     # query the whole mappings universe -> cache/debt/debt_YYYY-MM-DD.parquet (resumable: finished batches are kept)
+    python data_pipeline/shared/debt_snapshot.py diff                # newest snapshot vs the one before it (added / removed / changed securities)
 One BQL query per UNIQUE equity ticker (own BBG_Equity_Ticker first; several CDS names can share one), then rows are copied to every market_cds_ticker that maps to it. Banks return tens of thousands of notes,
 so a full run takes roughly 20-30 min; run it about weekly. Columns: market_cds_ticker, equity_ticker, security_id, security_name, asset_class, currency, issue_date, maturity,
 notional_outstanding (USD), notional_local (own currency), notional_total (loans: tranche size; bonds: = outstanding), amt_out_asof (date of the outstanding amount), coupon, payment_rank, security_type (Bloomberg: TERM, REV, LOC, DELAY-DRAW TERM, GLOBAL, ...), pulled_at.

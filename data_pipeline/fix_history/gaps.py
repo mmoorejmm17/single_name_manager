@@ -1,6 +1,6 @@
 """List every place the history still has no price, as runs of consecutive dates per (index, name), with the neighbouring prices to ballpark from.
 
-    python pricing/fix_history/gaps.py              # writes cache/review/gaps.csv (open it in Excel) and prints a summary
+    python data_pipeline/fix_history/gaps.py              # writes cache/review/gaps.csv (open it in Excel) and prints a summary
 
 Reads the working copy (cache/). Columns are laid out so index_name .. note can be copied straight into config/overrides.csv:
     index_name, market_cds_ticker, start_date, end_date, conv_spread, conv_spread_end, force, source, note   (the five to fill in are blank here)

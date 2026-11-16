@@ -1,7 +1,7 @@
 """WRITE side of the store: pull the index rosters / maturities (Bloomberg) and the single-name rows (Databricks) into the working copy cache/.
 
 Only the owner runs this. The analysis code never imports it; it reads the snapshot that publish.py copies from cache/ into data/.
-Run from the project root with the venv or system Python: python pricing/daily/update.py
+Run from the project root with the venv or system Python: python data_pipeline/daily/update.py
 """
 import _paths  # noqa: F401  (must come first: points cdx_spreads at the working copy cache/ and config/)
 import sys

@@ -1,7 +1,7 @@
 """Turn the owner's ballpark conv_spreads (config/overrides.csv) into fully priced cells (cache/overrides_priced.parquet). Needs the SYSTEM Python (Quantifi Toolkit).
 
-    python pricing/fix_history/overrides.py             # price every row of config/overrides.csv
-    python pricing/fix_history/overrides.py --dry-run   # expand and check only, nothing is written
+    python data_pipeline/fix_history/overrides.py             # price every row of config/overrides.csv
+    python data_pipeline/fix_history/overrides.py --dry-run   # expand and check only, nothing is written
 
 config/overrides.csv (one row per fix; paste rows from cache/review/gaps.csv, whose first columns have this layout):
     index_name         e.g. HY41; blank = every index the name is in

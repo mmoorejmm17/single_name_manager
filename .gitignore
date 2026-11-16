@@ -4,4 +4,4 @@ cache/
 *.parquet
 data/
 
-credit_analysis/companies/*/filings/
+financial_statements/companies/*/filings/

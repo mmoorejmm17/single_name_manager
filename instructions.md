@@ -18,7 +18,7 @@ pip install pandas numpy pyarrow ipykernel
 (Do not run `poetry install`: it also pulls the Bloomberg / Databricks packages that only the data owner needs.)
 
 ## Use it
-1. Open a notebook in `notebooks/` and select the `.venv` kernel:
+1. Open a notebook in `index_notebooks/` (or `singles_notebooks/`) and select the `.venv` kernel:
    - `index_spread_moves.ipynb`: pick an index (e.g. `HY47`) and two dates; shows which names are missing data, then every name's spread, upfront, all_upfront and risky_pv01 at both dates and the change, plus index metrics.
    - `dispersion.ipynb`: dispersion of all_upfront across an index over time.
    - `topN.ipynb`: share of the index's expected loss in the N widest names, two dates.
@@ -33,10 +33,10 @@ local copy, copy that `data\base` folder into the clone as `data\base`, or set `
 
 ## Ground rules
 - `analysis/` only reads data. It never writes, so you cannot damage the data store by running notebooks.
-- `pricing/` builds and publishes the data (Bloomberg, Databricks, Quantifi, Excel add-in). Please do not run it for now; the owner is still fixing old missing data. Running `update_store` yourself may be allowed later.
+- `data_pipeline/` builds and publishes the data (Bloomberg, Databricks, Quantifi, Excel add-in). Please do not run it for now; the owner is still fixing old missing data. Running `update_store` yourself may be allowed later.
 - The data can change when the owner re-publishes. If numbers shift, compare the "data published" line at the top of the notebook.
 - Missing / approximated data is flagged in the notebook (red = no price, amber = wide name at a marked-down recovery, blue = re-priced from the other coupon, purple = Markit add-in).
   `CLAUDE.md` has the definitions (what "priced" means, how all_upfront, dispersion and top-N are computed).
 
 ## Folders
-`analysis/` code that reads data, `notebooks/` the three notebooks, `data/base/` the published data store (not in git), `pricing/` owner-only code, `config/` hand-maintained inputs, `docs/` Markit user guide.
+`analysis/` code that reads data, `index_notebooks/` and `singles_notebooks/` the notebooks, `data/base/` the published data store (not in git), `data_pipeline/` owner-only code, `config/` hand-maintained inputs, `docs/` Markit user guide.

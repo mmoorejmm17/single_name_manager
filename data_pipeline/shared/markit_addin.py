@@ -18,7 +18,7 @@ from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[2]      # project root (this file lives in pricing/shared/)
+ROOT = Path(__file__).resolve().parents[2]      # project root (this file lives in data_pipeline/shared/)
 CACHE = ROOT / 'cache'
 WORK = CACHE / 'work'                  # scratch: raw add-in pulls, tenor map, fill errors
 STORE = CACHE / 'base'                 # working copy of the store

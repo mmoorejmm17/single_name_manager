@@ -1,7 +1,7 @@
 """Single-name CDS spread moves for the constituents of a CDX / iTraxx index (READ side: analysis of the published data/ snapshot).
 
 Flow: index_name (e.g. 'IG47') -> non-zero-weight members and the index maturity (published rosters) -> store rows at that
-cds_maturity -> spread change between two dates. The store is BUILT by pricing/ (cdx_store.update_store, then publish.py); nothing here writes it.
+cds_maturity -> spread change between two dates. The store is BUILT by data_pipeline/ (cdx_store.update_store, then publish.py); nothing here writes it.
 """
 import json
 import os
@@ -10,9 +10,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# READ SIDE. Everything in analysis/ only READS the published snapshot in data/ (written by pricing/shared/publish.py, never by the notebooks).
+# READ SIDE. Everything in analysis/ only READS the published snapshot in data/ (written by data_pipeline/shared/publish.py, never by the notebooks).
 # No Bloomberg / Databricks / Quantifi / Excel is needed to import or use it. The pricing scripts point these two env vars at their working
-# copy (cache/ and config/) before importing this module (pricing/shared/_paths.py); otherwise the defaults below apply.
+# copy (cache/ and config/) before importing this module (data_pipeline/shared/_paths.py); otherwise the defaults below apply.
 ROOT = Path(__file__).resolve().parent.parent      # project root (this file lives in analysis/)
 STORE = os.environ.get('CDS_STORE') or 'base'          # which store: a folder with prices/ reference/ metrics/ MANIFEST.json (today only 'base' exists)
 SHARED_DATA_DIR = Path('S:/Structured Credit/Matt Stuff/single_name_manager/data') / STORE   # the owner's published store on the shared drive
@@ -36,7 +36,7 @@ _ID_COLS = ['index_name', 'index_coupon', 'member_name', 'market_cds_ticker', 'm
             'coupon_matches_index']
 STORE_COLS = _ID_COLS + [c for c in SPREAD_COLS if c not in _ID_COLS]   # column order of spreads.parquet
 STORE_FILE = PRICES_DIR / 'spreads.parquet'        # raw Databricks mirror, one row per index x member x date (full grid)
-OVERRIDES_FILE = CONFIG_DIR / 'overrides.csv'                # hand-maintained ballpark conv_spreads (pricing/fix_history/overrides.py prices them into overrides_priced.parquet)
+OVERRIDES_FILE = CONFIG_DIR / 'overrides.csv'                # hand-maintained ballpark conv_spreads (data_pipeline/fix_history/overrides.py prices them into overrides_priced.parquet)
 MANUAL_FILE = PRICES_DIR / 'overrides_priced.parquet'          # the priced overlay of those overrides: wins over every other source for the cells it lists
 # DEFINITION of PRICED lives in priced_mask(): a par_spread, or a conv_spread (> 0) / upfront with its running_coupon (risky_pv01 optional; see CLAUDE.md).
 EXTRA_COLS = ['upfront', 'all_upfront', 'risky_pv01']   # shown next to the spread at dates X and Y
@@ -119,7 +119,7 @@ def index_coupon(index_name):
 def get_spread_history(index_name):
     """Stored rows for one index (all dates).
 
-    This only reads the published store (pricing/shared/publish.py writes it).
+    This only reads the published store (data_pipeline/shared/publish.py writes it).
     """
     if not STORE_FILE.exists():
         raise FileNotFoundError(f"{STORE_FILE} missing: no published data")
@@ -168,7 +168,7 @@ def _load_addin():
 
 
 def _load_manual():
-    """Manually overridden cells, priced by Quantifi from the owner's ballpark conv_spreads (pricing/fix_history/overrides.py), or None if there are none."""
+    """Manually overridden cells, priced by Quantifi from the owner's ballpark conv_spreads (data_pipeline/fix_history/overrides.py), or None if there are none."""
     return pd.read_parquet(MANUAL_FILE) if MANUAL_FILE.exists() else None
 
 

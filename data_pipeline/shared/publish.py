@@ -1,9 +1,9 @@
 """Publish the working copy (cache/, config/) as the frozen snapshot the analysis reads (data/). Owner only.
 
-    python pricing/shared/publish.py            # recompute index_metrics from the working copy, check it, copy into data/, write data/MANIFEST.json
-    python pricing/shared/publish.py --check    # only run the checks
-    python pricing/shared/publish.py --allow-partial   # publish even if the newest date is mostly empty (normally refused)
-    python pricing/shared/publish.py --restore  # put the previous published store (data/_previous, kept by every publish) back
+    python data_pipeline/shared/publish.py            # recompute index_metrics from the working copy, check it, copy into data/, write data/MANIFEST.json
+    python data_pipeline/shared/publish.py --check    # only run the checks
+    python data_pipeline/shared/publish.py --allow-partial   # publish even if the newest date is mostly empty (normally refused)
+    python data_pipeline/shared/publish.py --restore  # put the previous published store (data/_previous, kept by every publish) back
 
 Before anything is overwritten the current published store is copied to data/_previous (one level of undo).
 Each file is copied to a temp name and renamed into place, and MANIFEST.json is written LAST, so a reader sees either the old snapshot or the new one
@@ -80,7 +80,7 @@ def _check():
     pct = cov.loc[cov['published_date'] == last, 'has_data'].mean() * 100
     if pct < 50 and not ALLOW_PARTIAL:
         raise ValueError(f'the newest date {last:%Y-%m-%d} has Databricks rows for only {pct:.0f}% of its cells (not loaded yet?). Publishing it would show nearly every name as missing. '
-                         f'Run pricing/daily/update.py later (it drops such a date), or pass --allow-partial to publish anyway.')
+                         f'Run data_pipeline/daily/update.py later (it drops such a date), or pass --allow-partial to publish anyway.')
     for n in names:
         if not (STORE / 'reference' / 'members' / f'members_{n}.csv').exists():
             raise FileNotFoundError(f'cache/base/reference/members/members_{n}.csv missing')

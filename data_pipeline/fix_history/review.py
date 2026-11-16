@@ -1,16 +1,16 @@
 """The standard way to repair a name's missing history: a review spreadsheet per name. Use the SYSTEM Python (Bloomberg, Quantifi and openpyxl are all there).
 
-    python pricing/fix_history/review.py list                  # which names have gaps, biggest first
-    python pricing/fix_history/review.py make SIRI [MDC ...]   # writes cache/review/SIRI.xlsx (add --fresh to ignore earlier entries: the override column starts blank)
+    python data_pipeline/fix_history/review.py list                  # which names have gaps, biggest first
+    python data_pipeline/fix_history/review.py make SIRI [MDC ...]   # writes cache/review/SIRI.xlsx (add --fresh to ignore earlier entries: the override column starts blank)
     ... open it in Excel, fill the yellow `override_spread` column (copy/paste `best_guess` where you agree, type your own where you don't), save, CLOSE it ...
-    python pricing/fix_history/review.py ingest SIRI           # reads the sheet, updates config/overrides.csv, prices the cells with Quantifi
+    python data_pipeline/fix_history/review.py ingest SIRI           # reads the sheet, updates config/overrides.csv, prices the cells with Quantifi
 
 Sheet `review`, one row per missing date per index: index_name | index_mat_fmt | ticker | name | date | date_fmt | imm_tenor (the standard tenor that day, e.g. 2.5y) | years_left | bbg_5y (Bloomberg 5Y PX_LAST) | best_guess | guess_method | override_spread |
 source | note | status.  `override_spread` is the ONLY thing that counts: blank = still a gap (not approved), a number = the conv_spread in bp at the index coupon you approve.
 `source` / `note` are free text recorded with each approval (they default to the guess method). Sheet `runs` lists the gaps with the neighbouring Markit prices and the fit;
 sheet `charts` plots bbg_5y, best_guess and your override per index so you can eyeball it. Re-running `make` is safe: it keeps what you already entered (and what is already approved)
 and archives the old file in cache/review/old/. After `ingest` the sheet is the single record for that name: ingest REPLACES all override rows for that name from it.
-Cells then show as `override` (teal) in the notebooks once you run `python pricing/shared/publish.py`.
+Cells then show as `override` (teal) in the notebooks once you run `python data_pipeline/shared/publish.py`.
 """
 import shutil
 import sys
@@ -199,7 +199,7 @@ def make(ticker, fresh=False):
     for i, t in enumerate([f'{ticker}: fill the yellow override_spread column on the `review` sheet.',
                            'override_spread = the conv_spread in bp (at the index coupon, HY/XO 500, IG/MA 100) you approve for that index on that date. Blank = leave as a gap.',
                            'Copy/paste best_guess where you agree. source / note are optional text recorded with it.',
-                           'Save and CLOSE the file, then run:  python pricing/fix_history/review.py ingest ' + ticker,
+                           'Save and CLOSE the file, then run:  python data_pipeline/fix_history/review.py ingest ' + ticker,
                            'The `runs` sheet shows the gaps with the neighbouring Markit prices; `charts` plots bbg 5Y, best guess and your override per index.'], 1):
         rd.cell(i, 1, t)
     rd.column_dimensions['A'].width = 140
@@ -274,7 +274,7 @@ def ingest(ticker, price=True):
         left = gp.find_gaps()
         left = left[left['market_cds_ticker'] == ticker]
         print(f'  {ticker}: {int(left["n_days"].sum()):,} cells still open' + (f' in {left["index_name"].nunique()} indices' if len(left) else ''))
-        print('  next: python pricing/shared/publish.py (when you want the notebooks to see it)')
+        print('  next: python data_pipeline/shared/publish.py (when you want the notebooks to see it)')
 
 
 if __name__ == '__main__':
