@@ -1,91 +1,140 @@
-# Credit report: OI (OI European Group B.V.)
+<h1 align="center"><b>Credit report: OI (OI European Group B.V.)</b></h1>
 
-Generated from `credit_reports/TEMPLATE.md`. First credit worked through, started 2026-11-23. Status per bullet: ANSWERED / PARTIAL / NOT DONE. Everything here is from the filings in `financial_statements/companies/oi/filings/` unless noted; keyword searches were used on the 10-K and proxy, not full reads.
+<p align="center"><i>From <code>TEMPLATE.md</code>. Updated 2026-11-23. USD mm. Status: done / partial / todo. Filings in <code>financial_statements/companies/oi/filings/</code>.</i></p>
 
-## Header
-- CDS ticker / index: OI / XO      Markit ticker: OI-Egp (SNRFOR, EUR, MM14, 500 bp coupon)      RED code: NTD74V (pair NTD74VAD2)      Bloomberg 5Y: `OI EURO CDS EUR SR 5Y D14 Corp` (CY351713)
-- Reference entity: OI European Group B.V. (OIEG), Dutch private company, indirect wholly owned subsidiary of O-I Glass (8-K 2023-05-26). Ultimate parent: O-I Glass, Inc., NYSE: OI, CIK 0000812074 (Bloomberg `CENTRAL_INDEX_KEY_NUMBER`); OIEG has no CIK of its own.
-- Deliverable debt (OIEG's own): EUR 600mm 6.25% senior notes due 2028 (issued May 2023); EUR 500mm 5.25% due 2029 (May 2024); USD 400mm 4.75% due 2030 (ISIN USN6704RAK79, the mappings file's bond proxy; named in the 2029 indenture's definition of the Company's existing notes). The entity ISIN XS2624554320 is probably the 2028 notes (not confirmed). The same definition also lists 3.125% due 2024 and 2.875% due 2025 euro notes, probably matured or redeemed (not confirmed).
-- Other group debt, NOT deliverable (issuer is OBGC, a PARENT of OIEG): USD 690mm 7.25% due 2031 (May 2023), USD 300mm 7.375% due 2032 (May 2024), USD 500mm 9.50% due 2033 (May 2026).
-- Sources read: 8-K exhibits 2023-2026 (5 indentures / credit agreement exhibits), 10-K FY2023-25 + Exhibit 21, 2026 proxy (DEF 14A, 2026-05-13). Not yet read: earnings releases / calls, the credit agreement itself, the charter.
+## Market snapshot
+<p align="center"><img src="charts/OI_cds_equity_1y.png" width="720"></p>
+
+- 5Y CDS 1,041bp on 19 Nov 2026 vs 433bp at 30 Sep and 257bp at YE25. Equity $4.28 vs $14.76 at YE25.<sup>1</sup>
+- Step 28 Oct (491 to 753bp), the day after the Q3 release and guidance cut.<sup>2</sup> Second leg 17-19 Nov (779 to 1,041bp), cause not identified.
+- CDS is about 520bp wider than the 1y equity regression implies: credit is pricing worse than equity.<sup>1</sup>
+
+Sources: 1) Markit CDS (Databricks) and equity prices via the cache of `claude_repos/timeseries_slideshow_tool`, through 19 Nov 2026; chart made by `credit_reports/make_chart.py` · 2) [Q3'26 earnings release, 27 Oct 2026](../financial_statements/companies/oi/filings/earnings/oi_2026-10-27_8-K_tm2628380d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119192/tm2628380d1_ex99-1.htm))
+
+## CDS reference & deliverables
+- CDS: OI, XO index. Markit `OI-Egp` (SNRFOR, EUR, MM14, 500bp). RED `NTD74V`. BBG curve CY351713.<sup>1</sup>
+- Reference entity: OI European Group B.V. (OIEG), private Dutch subsidiary of O-I Glass (NYSE: OI, CIK 0000812074).<sup>1,2</sup>
+- Deliverable (OIEG's own notes): EUR 600mm 6.25% 2028, EUR 500mm 5.25% 2029, USD 400mm 4.75% 2030 (the mappings bond proxy, ISIN USN6704RAK79).<sup>1,3,4</sup>
+- Not deliverable: OBGC notes. Exhibit 21 nests OIEG under OBGC (parent); a sibling relationship would give the same answer.<sup>5</sup>
+
+Sources: 1) [CDS mappings file](../../cds_mappings/cds_mappings_final.csv) · 2) [8-K 23 May 2023, Item 1.01](../financial_statements/companies/oi/filings/oi_2023-05-26_8-K_8-K_tm2316971d1_8k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465923065000/tm2316971d1_8k.htm)) · 3) [OIEG 2029 notes indenture, definition of Company Existing Senior Notes](../financial_statements/companies/oi/filings/oi_2024-05-28_8-K_EX-4.1_tm2414914d4_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465924065582/tm2414914d4_ex4-1.htm)) · 4) [OBGC 2033 notes indenture, definition of OIEG Existing Senior Notes](../financial_statements/companies/oi/filings/oi_2026-05-18_8-K_EX-4.1_tm2614509d2_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926063186/tm2614509d2_ex4-1.htm)) · 5) [10-K FY2025, Exhibit 21](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231xex21.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231xex21.htm))
 
 ## 1. Character & Control
-1. **Control**: ANSWERED. One class of listed common (NYSE: OI); no other class on the 10-K cover. Proxy: 153,284,461 shares at the 18 Mar 2026 record date, ONE VOTE PER SHARE on all matters. 5%+ holders: BlackRock 15.1%, Vanguard 12.5% (13G/A dated Feb 2024, stale), Dimensional 5.3%, AllianceBernstein 5.2%; all directors and officers 1.0%. No controlling holder or sponsor. Board of 10, 9 independent (CEO Gordon Hardie the only insider), independent board chair, majority voting, all directors stand annually (no classified board seen), no poison pill found. 542 holders of record (nearly all via Cede & Co.). Entity chain (Exhibit 21, identical FY2023-25): O-I Glass > Owens-Illinois Group > Owens-Brockway Packaging > Owens-Brockway Glass Container (OBGC) > OI International Holdings > O-I Global Holdings C.V. > OIEG. No ownership percentages given; the C.V. is a partnership, so confirm 100% elsewhere. OIEG has 53 subsidiaries below it, mostly non-US operating companies.
-   - Source: 10-K FY2025 cover and Item 5; proxy pp. 18, 79, 85-87; Exhibit 21 FY2023-25.  Open: charter (Exhibit 3.1 to the 2019 8-K12B) for blank-check preferred or supermajority terms.
-2. **Financial policy**: PARTIAL. Dividend suspended in 2020, none since. Buybacks: $100mm "anti-dilutive" programme (May 2024, replaced a $150mm Feb 2021 one) to offset stock comp; $40mm repurchased in each of 2023 (2.0mm shares), 2024 (2.9mm), 2025 (3.3mm) vs stock compensation of $43mm / $14mm / $25mm and net losses attributable to O-I of $103mm / $106mm / $129mm. Read: not aggressive, small and steady. Management leverage stance: NOT FOUND in the 10-K or proxy (no hits for deleveraging, debt reduction, net leverage target, rating goal). Total debt about $5.0bn at both YE2024 and YE2025 (flat). Pay metrics: adjusted EBIT, adjusted EPS, adjusted FCF, ROIC, relative-TSR modifier; no leverage metric seen. Proxy describes FCF as available to "reinvest in growth or repurchase shares".
-   - Source: 10-K FY2025 Item 5 and statement of equity; proxy compensation section.  Open: earnings releases / calls / investor decks for a leverage target.
-3. **Strategic intent**: PARTIAL, first read: RESTRUCTURE, with growth as a later horizon. "Fit to Win" is idling or closing capacity and cutting jobs across 64 plants in 18 countries (shrinking from a large base, not a run-off); expected to last at least through 2026. Horizon 2 is profitable growth (mix, winning with customers, competing with aluminium cans); Horizon 3 is "strategic optionality": geographic expansion, M&A, joint ventures, partnerships. From 10-K wording only; no management statement tying intent to leverage.
-   - Source: 10-K FY2025 Item 1, Company Strategy.
-4. **Track record with creditors**: PARTIAL. Guidance credibility, from the releases: FY2024 FCF guide went $150-200mm (Feb 2024) to $100-150mm (by Apr, the 'previous' column in the Jul release) to $50-100mm (Jul) to a $130-170mm USE (Oct), actual $(128)mm; FY2025 guide of $150-200mm held all year, actual +$168mm (low end); FY2026 guide cut three times in nine months (see Capacity table): adj. EBITDA midpoint from about $1,275mm to about $938mm, FCF from about +$200mm to about $(300)mm. Mixed record: delivered in 2025, missed badly in 2024 and 2026. Still to read (also a possible good-co / bad-co precedent, see Strategic intent in the template): Paddock Enterprises, LLC (asbestos entity, listed directly under O-I Glass in Exhibit 21; the 10-K exhibit list ties it to a December 2019 8-K12B merger; from memory it went through Chapter 11, unverified); past refinancings (2023-2026 issuance pattern below); Fit to Win delivery vs plan.
+1. **Control** (done): plain. Widely held, one class, one vote per share, no controller.<sup>1</sup>
+   - BlackRock 15%, Vanguard 12.5%; insiders 1%; 9 of 10 directors independent, independent chair.<sup>2</sup>
+   - Chain: O-I Glass > OI Group > Owens-Brockway Packaging > OBGC > OI International Holdings > O-I Global Holdings C.V. > OIEG. No ownership % given; the C.V. is a partnership, so confirm 100%.<sup>3</sup>
+   - Charter: one vote per share, no dual class. Board-friendly: blank-check preferred (50mm authorized, none seen issued), 80% vote to remove a director without cause, no shareholder written consent, only the board can call special meetings. Anti-takeover, but no controller.<sup>8</sup>
+2. **Financial policy** (partial): not aggressive.
+   - No dividend since 2020. Buybacks about $40mm a year (offsets stock comp), despite net losses of $103-129mm a year.<sup>4</sup>
+   - No leverage target stated in the 10-K or proxy. Company now guides 4.5-5.0x at YE26.<sup>5</sup> Open: earnings calls.
+3. **Strategic intent** (partial): restructure, with growth and M&A as a later horizon.
+   - "Fit to Win": closing or idling capacity (64 plants, 18 countries).<sup>6</sup> New European plant closure proposed (Q4 charges $100-120mm).<sup>5</sup>
+4. **Track record** (partial): guidance credibility is poor.
+   - FY24 FCF guide +150-200, actual -128. FY25 met (+168). FY26 cut three times in nine months (see Capacity).<sup>7</sup>
+   - Paddock: in the Dec 2019 "Corporate Modernization" the old Owens-Illinois, Inc. was merged into Paddock Enterprises, which was then separated from the operating group (OI Group's stock was distributed up to O-I Glass), leaving Paddock a sister company holding the legacy liabilities. A good-co / bad-co split done without a shareholder vote.<sup>9</sup>
+   - Outcome (resolved): Paddock filed Chapter 11 on 6 Jan 2020; plan confirmed 26 May 2022 with over 99% of asbestos claimants in favour; emerged Jul 2022 with a $610mm section 524(g) trust. O-I funded $601.5mm, of which $600mm was borrowed on the bank facility. Asbestos personal-injury claims are channelled to the trust, with O-I protected.<sup>10</sup>
+   - Read: the operating group paid for the release (and added about $600mm of debt in 2022). No sign bondholders were harmed. Open: confirm dates and amounts from the FY2022 10-K.
+
+Sources: 1) [10-K FY2025, cover and Item 5](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm)); [2026 proxy, voting and shares](../financial_statements/companies/oi/filings/annual/oi_2026-05-13_DEF%2014A_oi-20260513xdef14a.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926037803/oi-20260513xdef14a.htm)) · 2) [2026 proxy, Security Ownership and Board sections](../financial_statements/companies/oi/filings/annual/oi_2026-05-13_DEF%2014A_oi-20260513xdef14a.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926037803/oi-20260513xdef14a.htm)) · 3) [10-K FY2025, Exhibit 21](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231xex21.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231xex21.htm)) (same in [FY2024](../financial_statements/companies/oi/filings/annual/oi_2024-12-31_10-K_oi-20241231xex21.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000155837025000868/oi-20241231xex21.htm)) and [FY2023](../financial_statements/companies/oi/filings/annual/oi_2023-12-31_10-K_oi-20231231xex21.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000155837024001165/oi-20231231xex21.htm))) · 4) [10-K FY2025, Item 5 and statement of equity](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm)) · 5) [Q3'26 release, outlook](../financial_statements/companies/oi/filings/earnings/oi_2026-10-27_8-K_tm2628380d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119192/tm2628380d1_ex99-1.htm)) · 6) [10-K FY2025, Item 1, Company Strategy](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm)) · 7) FCF guidance in the releases: [Feb 2024](../financial_statements/companies/oi/filings/earnings/oi_2024-02-06_8-K_tm245351d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465924011123/tm245351d1_ex99-1.htm)), [Jul 2024](../financial_statements/companies/oi/filings/earnings/oi_2024-07-30_8-K_tm2420474d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465924083994/tm2420474d1_ex99-1.htm)), [Oct 2024](../financial_statements/companies/oi/filings/earnings/oi_2024-10-29_8-K_tm2427025d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465924112249/tm2427025d1_ex99-1.htm)), [Feb 2025](../financial_statements/companies/oi/filings/earnings/oi_2025-02-04_8-K_tm255439d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465925009139/tm255439d1_ex99-1.htm)), [Feb 2026](../financial_statements/companies/oi/filings/earnings/oi_2026-02-10_8-K_tm265815d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926012670/tm265815d1_ex99-1.htm))
+
+Sources (cont.): 8) [Charter (Amended and Restated Certificate of Incorporation, Dec 2019)](../financial_statements/companies/oi/filings/charter/oi_2019-12-25_8-K12B_tm1926776d1_ex3-2.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465919076288/tm1926776d1_ex3-2.htm)): Art. IV (stock), X (board, 80% removal), XI (no written consent, special meetings), XII (80% to amend) · 9) [8-K12B, 25 Dec 2019, Explanatory Note and Item 1.01 (Corporate Modernization)](../financial_statements/companies/oi/filings/charter/oi_2019-12-25_8-K12B_tm1926776d1_8k.htm) · 10) from SEC search results, not yet downloaded or read: [8-K, Jul 2022](https://www.sec.gov/Archives/edgar/data/812074/000110465922080519/tm2221274d1_8k.htm); [10-Q Q2 2023, Paddock note](https://www.sec.gov/Archives/edgar/data/812074/000155837023012937/oi-20230630x10q.htm); [Latham & Watkins on the emergence](https://www.lw.com/en/news/2022/07/latham-watkins-represents-paddock-enterprises-llc-in-successful-emergence-from-chapter-11) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465919076288/tm1926776d1_8k.htm))
 
 ## 2. Capacity
-1. Leverage and coverage: PARTIAL. Total debt about $5.0bn flat YE2024 to YE2025; about 30% floating. EBITDA, net debt / EBITDA and interest cover not yet pulled (10-K MD&A / earnings releases). Net loss attributable to O-I: $103mm (2023), $106mm (2024), $129mm (2025).
-2. Cash-flow quality and direction: PARTIAL. Operating cash flow $600mm in 2025 vs $489mm in 2024 (up despite the larger net loss, mainly non-cash items). 2026 guide: operating cash flow about $650mm including about $150mm of restructuring payments, capex about $450mm (my arithmetic: roughly $200mm of free cash flow before dividends and buybacks). Fit to Win: at least $275mm benefit in 2026, at least $750mm cumulative through 2027 (2024 baseline).
-3. Liquidity and maturity wall: PARTIAL. Revolver $1.25bn, $1.24bn unused at YE2025. Bank facility (30 Sep 2025, up to $2.7bn: revolver $1.25bn, TLA $800mm, TLB $650mm): TLA and revolver to Sep 2030, TLB to Sep 2032, but a SPRINGING MATURITY pulls them forward to 91 days before any senior notes still outstanding mature (matters for the EUR 2028 and 2029 notes). Weighted average rate on the facility 5.66%. Maturity ladder by year not built; cash balance not pulled.
-   - Source: 10-K FY2025 (MD&A liquidity, outlook), Note on debt; 8-K 2025-10-01 exhibit 4.1.
-   - **Quarterly history, from a colleague's model** (`credit_reports/models/OI_Glass_Credit_Model.xlsx`, copied 2026-11-23, built from earnings releases / 10-Qs / 10-Ks through Q3 2026; NOT yet independently rebuilt, treat as unverified except where noted). USD mm.
-     VERIFIED 2026-11-23 against the 13 earnings releases (8-K Ex. 99.1, Q3'23 to Q3'26; `filings/earnings/`). Adj. EBITDA = segment operating profit - retained corporate costs and other + D&A: all 12 quarters below reproduce the model EXACTLY from the releases' segment tables (e.g. Q3'26: 139 - 27 + 124 = 236). Basis note: the model uses cash-flow D&A (includes about $2-3mm a quarter of finance-fee amortisation); the company's own figure uses depreciation + amortisation of intangibles, so the company-reported numbers are 2-3 lower (Q3'25 329 vs 332; Q3'26 234 vs 236; FY25 1,218 vs 1,226). The company first published adjusted EBITDA in the Feb 2026 release (FY25), none of the earlier releases mention it; before that it is a rebuilt number. It excludes "items not considered representative of ongoing operations" (restructuring, impairments), which ARE real cash costs: FY25 items were $447mm, and about $150mm of restructuring payments were in the original 2026 cash flow guide. FCF is the company's definition (CFO - capex, non-GAAP) and ties to the releases in every quarter (FY24 -128, FY25 +168); the model's own FCF row adds asset sale proceeds, shown separately here. Q1'24 comes from the prior-year column of the Q1'25 release (the Apr 2024 exhibit failed to download).
+1. **Leverage** (done): net leverage 2.75x (Q4'23) to 4.49x (Q3'26) with debt flat near $5bn, so it is all EBITDA decline.<sup>1</sup>
+   - Adj. EBITDA / cash interest about 3.1x (LTM interest $322mm).<sup>2</sup>
+2. **Cash flow** (done): FCF is seasonal (Q1 outflow, Q4 inflow). FY26 guided to about $(300)mm.<sup>3</sup>
+   - Adj. EBITDA excludes restructuring, which is real cash (FY25 items $447mm).<sup>3</sup>
 
-     | | Q4'23 | Q1'24 | Q2'24 | Q3'24 | Q4'24 | Q1'25 | Q2'25 | Q3'25 | Q4'25 | Q1'26 | Q2'26 | Q3'26 |
-     |---|---|---|---|---|---|---|---|---|---|---|---|---|
-     | Adj. EBITDA | 244 | 320 | 326 | 240 | 225 | 297 | 320 | 332 | 277 | 229 | 269 | 236 |
-     | FCF (company: CFO - capex) | 158 | -483 | 90 | 55 | 210 | -306 | 51 | 114 | 309 | -436 | -1 | 84 |
-     | Asset sale proceeds (not in FCF) | 0 | 0 | 6 | 13 | 10 | 13 | 5 | 8 | 30 | 5 | 2 | 17 |
-     | Cash interest paid (from 10-Q / 10-K, derived by differencing) | 79 | 78 | 110 | 49 | 107 | 56 | 122 | 40 | 110 | 49 | 124 | 39 |
-     | Total debt | 4,946 | 4,934 | 5,148 | 5,246 | 4,969 | 5,012 | 5,134 | 5,116 | 4,999 | 4,960 | 4,986 | 4,919 |
-     | LTM Adj. EBITDA | 1,464 | 1,328 | 1,258 | 1,130 | 1,111 | 1,088 | 1,082 | 1,174 | 1,226 | 1,158 | 1,107 | 1,011 |
-     | Net leverage (model) | 2.75x | 3.42x | 3.56x | 3.97x | 3.81x | 4.22x | 4.29x | 3.88x | 3.46x | 4.01x | 4.20x | 4.49x |
+   | | Q4'23 | Q1'24 | Q2'24 | Q3'24 | Q4'24 | Q1'25 | Q2'25 | Q3'25 | Q4'25 | Q1'26 | Q2'26 | Q3'26 |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | Adj. EBITDA | 244 | 320 | 326 | 240 | 225 | 297 | 320 | 332 | 277 | 229 | 269 | 236 |
+   | FCF (CFO - capex) | 158 | -483 | 90 | 55 | 210 | -306 | 51 | 114 | 309 | -436 | -1 | 84 |
+   | Cash interest paid | 79 | 78 | 110 | 49 | 107 | 56 | 122 | 40 | 110 | 49 | 124 | 39 |
+   | Total debt | 4,946 | 4,934 | 5,148 | 5,246 | 4,969 | 5,012 | 5,134 | 5,116 | 4,999 | 4,960 | 4,986 | 4,919 |
+   | LTM adj. EBITDA | 1,464 | 1,328 | 1,258 | 1,130 | 1,111 | 1,088 | 1,082 | 1,174 | 1,226 | 1,158 | 1,107 | 1,011 |
+   | Net leverage | 2.75x | 3.42x | 3.56x | 3.97x | 3.81x | 4.22x | 4.29x | 3.88x | 3.46x | 4.01x | 4.20x | 4.49x |
 
-     Other checks: model CFO ties to the 10-K / releases for 2024 ($489mm) and 2025 ($600mm); dividends + buybacks tie to buybacks of $40mm plus noncontrolling-interest distributions ($17mm 2024, $16mm 2025). Balance sheet VERIFIED against the nine 10-Qs and the 10-Ks: quarter-end cash and total debt (short-term loans and current portion + long-term debt) tie to the model in all 12 quarters, and net leverage recomputed from them and the model's LTM adjusted EBITDA matches (company reports leverage only at year-end: 3.5x at YE25, model 3.46x). Cash interest: the model ties for full years (FY24 $344mm, FY25 $328mm) but NOT for most single quarters (model has Q2'24 87 vs 110 actual, Q3'24 87 vs 49, Q4'24 92 vs 107, Q1'25 81 vs 56, Q2'25 85 vs 122, Q3'25 52 vs 40) and overstates Q3'26 by $16mm (55 vs 39; 9M'26 actual $212mm vs model $228mm), so the row above uses the company figures; coupons are semi-annual so the true pattern is lumpy (low in Q1 and Q3). Interest paid in the 10-K includes note repurchase premiums. LTM cash interest at Q3'26 is $322mm (328 - 218 + 212), not the model's $338mm, giving adj. EBITDA / cash interest of about 3.1x. This does not change FCF (CFO is reported). Not checked: segment rows beyond the totals, the cap-table tranche balances. Read: LTM adj. EBITDA fell from about $1.46bn to about $1.01bn while debt stayed near $5bn, so the rise in net leverage (2.75x to 4.49x) is all EBITDA, not borrowing. FCF is very seasonal (large Q1 working-capital outflow, strong Q4). The "dividends + buybacks" line is 0 in Q3'26; it includes NCI distributions, so that does not by itself show buybacks stopped (check the Q3'26 release).
-   - **2026 guidance has been cut three times (earnings releases, verified)**, so the FY2025 10-K outlook quoted above (OCF about $650mm, capex about $450mm) is stale:
+   | FY26 guidance | Adj. EBITDA | FCF | Year-end leverage |
+   |---|---|---|---|
+   | 10 Feb | $1,250-1,300 | about +200 | n/a (YE25 3.5x) |
+   | 28 Apr | $1,125-1,225 | +50 to +150 | |
+   | 28 Jul | $1,000-1,100 | (50) to (150) | about 4x |
+   | 27 Oct | **$925-950** | **about (300)** | **4.5-5.0x** |
 
-     | Release | FY26 adj. EBITDA | FY26 FCF | FY26 CFO | Year-end leverage |
-     |---|---|---|---|---|
-     | 10 Feb 2026 | $1,250-1,300mm | about +$200mm | about 650 | not stated (YE25: 3.5x) |
-     | 28 Apr 2026 | $1,125-1,225mm | +$50 to +150mm | 500-600 | |
-     | 28 Jul 2026 | $1,000-1,100mm | $(50) to $(150)mm | 275-375 | at or slightly above 4x |
-     | 27 Oct 2026 | **$925-950mm** | **about $(300)mm** | 125 | **4.5-5.0x** |
+   - Q3'26: adj. EBITDA 234 vs 329. Europe segment profit $2mm vs $95mm (price, energy and freight). 2027 targets withdrawn.<sup>4</sup>
+3. **Liquidity and maturities** (done): $1.53bn liquidity at 30 Sep 2026 (revolver $1,154mm + cash $379mm).<sup>4</sup>
+   - Springing maturity: the bank facility matures 91 days before any notes still outstanding, so the EUR 2028 notes (15 May 2028) need refinancing by about Feb 2028.<sup>5</sup>
+   - Bank debt: TLA and revolver Sep 2030, TLB Sep 2032.<sup>5</sup>
+   - Data notes: rebuilt from 13 earnings releases and 9 10-Qs. Matches a colleague's model except: its cash interest is wrong in several quarters (fixed here), its FCF adds asset sales (excluded here), and its D&A runs $2-3mm a quarter above the company's.<sup>6</sup>
 
-     Q3'26 (27 Oct 2026): adj. EBITDA $234mm vs $329mm; segment operating profit $139mm vs $235mm; Europe segment operating profit just $2mm vs $95mm (net price a $91mm drag, energy and freight about $15mm worse than expected); Americas $137mm vs $140mm. The company withdrew its 2027 targets (the colleague's cover still shows $1.2-1.3bn) and will guide 2027 in Feb. It is starting a process on the proposed permanent closure of a European plant, with Q4 charges of about $100-120mm including about $40-50mm of future cash. Liquidity at 30 Sep 2026: revolver capacity $1,154mm + cash $379mm = $1,533mm. Q2'26 (28 Jul) included an $873mm Europe goodwill impairment and a $96mm deferred-tax valuation allowance (per the model cover; Q2 net loss $965mm). The Feb 2026 release also flagged a $150mm step-up in European energy costs from the end of 2025, when favourable energy contracts expired (relevant to Contracts).
+Sources: 1) 10-Q balance sheets (cash, debt) in [`filings/quarterly/`](../financial_statements/companies/oi/filings/quarterly/) and EBITDA from the earnings releases · 2) interest paid: [Q3'26 10-Q, cash flow note](../financial_statements/companies/oi/filings/quarterly/oi_2026-09-30_10-Q_oi-20260930x10q.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119653/oi-20260930x10q.htm)); [10-K FY2025](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm)) · 3) [Q3'26 release, reconciliations](../financial_statements/companies/oi/filings/earnings/oi_2026-10-27_8-K_tm2628380d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119192/tm2628380d1_ex99-1.htm)) and [Feb 2026 release](../financial_statements/companies/oi/filings/earnings/oi_2026-02-10_8-K_tm265815d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926012670/tm265815d1_ex99-1.htm)) · 4) [Q3'26 release](../financial_statements/companies/oi/filings/earnings/oi_2026-10-27_8-K_tm2628380d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119192/tm2628380d1_ex99-1.htm)) · 5) [Q3'26 10-Q, Liquidity / Credit Agreement](../financial_statements/companies/oi/filings/quarterly/oi_2026-09-30_10-Q_oi-20260930x10q.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119653/oi-20260930x10q.htm)) · 6) [colleague's model](models/OI_Glass_Credit_Model.xlsx); all releases in [`filings/earnings/`](../financial_statements/companies/oi/filings/earnings/)
 
 ## 3. Capital
-1. Book equity vs debt: PARTIAL. Total equity (incl. noncontrolling interests) $1,744mm YE2023, $1,205mm YE2024, $1,445mm YE2025 vs about $5.0bn debt. Goodwill / tangible equity not pulled.
-2. Market cushion: PARTIAL. Non-affiliate market value about $1.13bn at 30 Jun 2025; 153.3mm shares at 18 Mar 2026. Current market cap and enterprise value not pulled (Bloomberg).
-3. Junior capital beneath the bond: NOT DONE (none seen; not checked).
+- Book equity $1,445mm (YE25) vs about $5.0bn debt (partial).<sup>1</sup>
+- Market cap not pulled. Non-affiliate value was about $1.13bn (Jun 2025).<sup>2</sup>
+- Junior capital beneath the bonds: none seen.
+
+Sources: 1) [10-K FY2025, statement of equity](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm)) · 2) [10-K FY2025, cover page](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm))
 
 ## 4. Collateral
-1. What secures it: PARTIAL. OIEG notes are senior UNSECURED, guaranteed by Owens-Illinois Group (OI Group) and the US subsidiaries that guarantee OI Group's credit agreement; the bank facility is SECURED by collateral of the company and certain subsidiaries (10-K), so secured bank debt ranks ahead in the same group. Full guarantor list (Annex A of each indenture) NOT YET READ; whether OBGC is a guarantor of the OIEG notes is not confirmed. Lien covenant (4.09) requires equal and ratable security beyond listed exceptions; the exceptions and Permitted Liens not analysed.
-2. Structural position: PARTIAL. OIEG is the bottom of a branch under OBGC and holds most non-US operations (53 subsidiaries). Claims at subsidiary level not mapped.
-3. Asset value: NOT DONE.
-4. CDS deliverability: ANSWERED (my reading of the ISDA rules, not legal advice). Deliverable: OIEG's own notes (above). Not deliverable: OBGC's notes, because OBGC is a parent of OIEG and OIEG is not among the 8-K-listed guarantors (OI Group and US subsidiaries). A Qualifying Affiliate Guarantee would also need OIEG to own more than 50% of the guaranteed entity, which fails. Bond proxy in the mappings file (`OI 4 3/4 02/15/30`) is an OIEG bond.
-   - Source: 8-Ks 2023-05-26, 2024-05-28, 2024-05-30, 2026-05-18; indentures; Exhibit 21; 10-K Credit Agreement description.
+1. **What secures it** (partial): notes are unsecured, guaranteed by OI Group and the US subsidiaries that guarantee the bank facility.<sup>1</sup> The $1.5bn bank facility is secured, so it ranks ahead.<sup>2</sup>
+   - Open: guarantor list (indenture Annex A). Whether OBGC guarantees the OIEG notes is unconfirmed.
+2. **Structure** (partial): per Exhibit 21 (indentation, same in FY23-25), OIEG sits under OBGC via OI International Holdings and the C.V., and holds most non-US operations (53 subsidiaries).<sup>3</sup> Unconfirmed elsewhere; check the OIEG shareholder in the Dutch KvK register or Bloomberg's corporate hierarchy.
+   - Three cases. (A) OIEG under OBGC (Ex. 21): OIEG's creditors are structurally senior to OBGC's on OIEG's assets. (B) Siblings: they meet only at the OI Group guarantee. (C) OIEG above OBGC: OIEG could draw on OBGC's earnings, behind OBGC's creditors. Ex. 21 shows A and contradicts C; B can't be ruled out.
+   - OBGC's own indentures only say OIEG is "an indirect, wholly owned subsidiary of OI Group" (neutral), and name OIEG only in definitions, never as a guarantor. Their guarantor annex is not in the downloaded exhibit text.<sup>4</sup>
+3. **Asset value** (todo).
+4. **CDS deliverability** (done): OIEG's own notes only. OBGC notes would need OIEG to own more than 50% of OBGC AND to guarantee them; the filings show OIEG owning neither, and OIEG is not named as a guarantor. Even in case C (OIEG above OBGC) they would not deliver without that guarantee.<sup>1,4</sup> My reading of the ISDA rules, not legal advice.
+   - Cheapest to deliver is probably the 4.75% 2030 (about 87, 30 Sep).<sup>2</sup>
+
+Sources: 1) [8-K 23 May 2023, Item 1.01](../financial_statements/companies/oi/filings/oi_2023-05-26_8-K_8-K_tm2316971d1_8k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465923065000/tm2316971d1_8k.htm)) and [OIEG 2028 indenture, Art. 10](../financial_statements/companies/oi/filings/oi_2023-05-26_8-K_EX-4.2_tm2316971d1_ex4-2.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465923065000/tm2316971d1_ex4-2.htm)) · 2) [Q3'26 10-Q, debt note](../financial_statements/companies/oi/filings/quarterly/oi_2026-09-30_10-Q_oi-20260930x10q.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119653/oi-20260930x10q.htm)) · 3) [10-K FY2025, Exhibit 21](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231xex21.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231xex21.htm)) · 4) [OBGC 2031 indenture (2023)](../financial_statements/companies/oi/filings/oi_2023-05-26_8-K_EX-4.1_tm2316971d1_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465923065000/tm2316971d1_ex4-1.htm)), [OBGC 2032 (2024)](../financial_statements/companies/oi/filings/oi_2024-05-30_8-K_EX-4.1_tm2415873d1_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465924066673/tm2415873d1_ex4-1.htm)), [OBGC 2033 (2026)](../financial_statements/companies/oi/filings/oi_2026-05-18_8-K_EX-4.1_tm2614509d2_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926063186/tm2614509d2_ex4-1.htm)), definitions section
 
 ## 5. Covenants
-1. **Leakage**: PARTIAL. OIEG indentures (2028 and 2029 notes, NY law): NO restricted-payments covenant and NO debt-incurrence covenant. Only liens (4.09), sale-leaseback (4.10) and guarantee-of-debt (4.11) covenants. Bank facility has a restricted-payments covenant (per 10-K), plus limits on investments, asset sales, affiliate transactions, sale-leasebacks and amendment of subordinated debt; baskets not read. Unrestricted-subsidiary and drop-down capacity NOT analysed (definitions of Restricted Subsidiary, Unrestricted Subsidiary, Permitted Investments in the credit agreement still to read). Unresolved: a 10-K risk factor says "certain of the indentures" restrict dividends and investments, which the OIEG indentures do not; probably older or other indentures, or generic wording.
-2. Debt and lien limits: PARTIAL. Liens: equal-and-ratable security with exceptions (credit-agreement cash collateral for L/Cs, existing liens, refinancing liens, Permitted Liens). Secured leverage maintenance covenant in the bank facility: max 2.50x (TLA and revolver).
-3. Triggers: ANSWERED for the notes. Change of control put at 101%, triggered when a person other than a Parent gets more than 50% of the voting power of OI GROUP (not OIEG). Events of default: payment (30-day grace on interest); cross-default / cross-acceleration at $75mm single / $150mm aggregate, needing notice and a 30-day cure; judgments $75mm / $150mm, 60 days; guarantee invalidity for OI Group or a significant-subsidiary guarantor; bankruptcy of OIEG, OI Group or a significant subsidiary. Calls: 2028 notes 103.125 (from 15 May 2025), 101.563 (2026), par from 2027; 2029 notes 102.625 (from 1 Jun 2026), 101.313 (2027), par from 2028. Guarantees of US subsidiaries fall away when their bank-facility guarantee is released (10.10(b)).
-4. Who is bound: ANSWERED for the notes. Covenants and reporting (10-K / 10-Q equivalents, EDGAR filing counts) are given by OI Group and its restricted subsidiaries; OIEG itself has almost no covenants of its own.
-   - Source: indentures 2023-05-25 (2028 notes) and 2024-05-28 (2029 notes); 10-K FY2025 Liquidity.  Open: read the Sept 2025 credit agreement (8-K 2025-10-01, ex 4.1).
+1. **Leakage** (partial): the OIEG notes have no restricted-payments and no debt-incurrence covenant. Only liens, sale-leaseback and guarantees.<sup>1</sup>
+   - Bank facility has a restricted-payments covenant. Baskets and unrestricted-subsidiary terms not read (todo: credit agreement).<sup>2,3</sup>
+   - Unresolved: the 10-K says "certain indentures" restrict dividends; the OIEG ones don't.<sup>4</sup>
+2. **Debt and lien limits** (partial): liens must be equal and ratable (exceptions not read).<sup>1</sup>
+   - Secured leverage covenant max 2.50x (bank lenders only). Now about 1.1-1.6x (estimate), so EBITDA would have to fall 34-55% to breach.<sup>2</sup>
+3. **Triggers** (done): change-of-control put at 101%, measured on OI Group (more than 50%).<sup>1</sup>
+   - Cross-default $75mm single / $150mm aggregate, after notice and a 30-day cure.<sup>1</sup>
+   - 2028 notes callable at par from 2027; 2029 notes at 102.625 from Jun 2026, par from 2028.<sup>1,5</sup>
+4. **Who is bound** (done): OI Group and its restricted subsidiaries. OIEG has almost no covenants of its own.<sup>1</sup>
+
+Sources: 1) [OIEG 2028 notes indenture](../financial_statements/companies/oi/filings/oi_2023-05-26_8-K_EX-4.2_tm2316971d1_ex4-2.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465923065000/tm2316971d1_ex4-2.htm)): Sections 3.08 (calls), 4.03 (reports), 4.08 (change of control), 4.09 (liens), 4.10, 4.11, 6.01 (defaults), 10.10 (guarantor release) · 2) [Q3'26 10-Q, Credit Agreement note](../financial_statements/companies/oi/filings/quarterly/oi_2026-09-30_10-Q_oi-20260930x10q.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119653/oi-20260930x10q.htm)) (secured leverage 2.50x, compliance statement); headroom is my estimate from its debt table · 3) [Credit Agreement, Sept 2025 (8-K exhibit 4.1)](../financial_statements/companies/oi/filings/oi_2025-10-01_8-K_EX-4.1_tm2527456d1_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465925095287/tm2527456d1_ex4-1.htm)), not yet read · 4) [10-K FY2025, Item 1A risk factors](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm)) · 5) [OIEG 2029 notes indenture, Section 3.08](../financial_statements/companies/oi/filings/oi_2024-05-28_8-K_EX-4.1_tm2414914d4_ex4-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465924065582/tm2414914d4_ex4-1.htm))
 
 ## 6. Classes
-1. Creditor map: PARTIAL. Secured bank facility (revolver, TLA, TLB; borrowers are subsidiaries) > unsecured notes at OIEG (EUR 2028, 2029; USD 2030) and at OBGC (USD 2031, 2032, 2033), all guaranteed by OI Group; asbestos / Paddock and pensions not mapped. Amounts per entity not tied to the balance sheet yet.
-2. Intercreditor and voting terms: NOT DONE (the indentures reference an Intercreditor Agreement, Pledge Agreement and Security Agreement among the Collateral Documents; not read).
-3. Non-debt claims: NOT DONE (asbestos / Paddock, pensions, litigation).
-4. Likely path in distress: NOT DONE.
+1. **Creditor map** (partial), 30 Sep 2026:<sup>1</sup>
+   - Secured bank debt $1,518mm (revolver 90, TLA 789, TLB 639), plus finance leases $142mm.
+   - Unsecured notes, all guaranteed by OI Group: OIEG about $1,647mm, OBGC about $1,490mm.
 
-## 7. Competition
-NOT DONE. Pointers from the 10-K: "one of the leading manufacturers of glass containers in the world", 64 plants in 18 countries, "the leading glass container manufacturer in most of the countries where it has manufacturing facilities"; alternative packaging (aluminium cans) named as a competitor in Horizon 2. Industry concentration, pricing power and cost position still to read.
+   | Issuer | Note | Principal | Price (30 Sep; stale, CDS has since widened) |
+   |---|---|---|---|
+   | OIEG (deliverable) | 6.25% 2028 (EUR) | 680 | 99.84 |
+   | OIEG | 5.25% 2029 (EUR) | 567 | 96.54 |
+   | OIEG | 4.75% 2030 | 400 | **86.98** |
+   | OBGC (not deliverable) | 7.25% 2031 | 690 | 86.94 |
+   | OBGC | 7.375% 2032 | 300 | 85.71 |
+   | OBGC | 9.5% 2033 | 500 | 93.30 |
 
-## 8. Contracts
-NOT DONE. Not checked yet: share of sales under contract and tenor, cost pass-through (energy, raw materials) terms, customer concentration.
+   - The market treats the 2028 notes as money-good (about par) and prices real risk beyond 2028 (mid-80s).
+2. **Intercreditor and voting** (todo). 3. **Non-debt claims**: asbestos resolved through the Paddock trust (Jul 2022); pensions, other legacy items (todo). 4. **Distress path** (todo).
 
-## 9. Correlation
-NOT DONE. To assess: earnings cyclicality (consumer packaging, energy-cost sensitivity), and whether plant and equipment would hold value if the business failed (furnaces and plants are specialised, but glass capacity is being closed under Fit to Win, so excess capacity matters).
+Sources: 1) [Q3'26 10-Q, long-term debt table and indicated market prices](../financial_statements/companies/oi/filings/quarterly/oi_2026-09-30_10-Q_oi-20260930x10q.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926119653/oi-20260930x10q.htm))
 
-## Open items / next documents to read
-- Earnings releases (8-K Item 2.02) and any call or investor-day material: leverage target, intent, guidance. Download with `download_annual_reports.py 812074 oi --items 2.02 --subdir earnings --years 13` (13 quarters, to rebuild and check the quarterly Adj. EBITDA / FCF table), and the 10-Qs with `--forms 10-Q --subdir quarterly --years 9`. Latest filings through Q3'26 (reported Oct 2026) are newer than the FY2025 10-K read so far.
-- Annex A of the OIEG indentures (guarantor list) and the 10-K debt note (balances by issuer, early redemptions).
-- The Sept 2025 credit agreement: restricted payments, investments, unrestricted subsidiaries, collateral, intercreditor terms.
-- The charter (Exhibit 3.1, 2019 8-K12B) and the Paddock Enterprises history (2019 filings) for Character.
-- Bloomberg: BQL debt snapshot for `OI` to check the debt list is complete; equity market cap; OI CDS history vs XO.
-- Mappings file: OIEG has no CIK of its own; parent CIK is in `config/ticker_cik.csv` (0000812074).
+## 7. Competition (todo)
+- Leader in glass containers in most of its countries.<sup>1</sup> Aluminium cans named as the competitor. Industry structure and pricing power not read.
+
+Sources: 1) [10-K FY2025, Item 1](../financial_statements/companies/oi/filings/annual/oi_2025-12-31_10-K_oi-20251231x10k.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926014319/oi-20251231x10k.htm))
+
+## 8. Contracts (todo)
+- Energy: favourable European energy contracts expired end of 2025 (about $150mm cost step-up).<sup>1</sup> Customer contract terms and pass-through not read.
+
+Sources: 1) [Feb 2026 release, 2026 outlook](../financial_statements/companies/oi/filings/earnings/oi_2026-02-10_8-K_tm265815d1_ex99-1.htm) ([SEC](https://www.sec.gov/Archives/edgar/data/812074/000110465926012670/tm265815d1_ex99-1.htm))
+
+## 9. Correlation (todo)
+- Consumer-packaging cyclicality and energy sensitivity. Specialised plants, and capacity is being closed, so excess capacity matters for recovery. (My inference, no source yet.)
+
+## Open items
+- Credit agreement (Sept 2025): restricted payments, investments, unrestricted subsidiaries, intercreditor.
+- Annex A guarantor list; FY2022 10-K to confirm the Paddock dates and the amount borrowed.
+- Earnings calls and decks for a leverage target.
+- Bloomberg: BQL debt check, market cap, OI CDS history vs XO.

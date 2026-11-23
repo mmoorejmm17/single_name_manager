@@ -36,6 +36,7 @@ def main():
     ap.add_argument('--years', type=int, default=3)
     ap.add_argument('--forms', default=None, help='default: 10-K,20-F,40-F; with --items the default is 8-K')
     ap.add_argument('--items', help='only filings reporting this 8-K item, e.g. 2.02 (earnings releases); also fetches their Exhibit 99 (press release / slides)')
+    ap.add_argument('--exhibits', help='comma-separated exhibit numbers to fetch alongside the main document, e.g. 3 (charter / by-laws) or 3,10; overrides the default')
     ap.add_argument('--subdir', default='annual', help='folder under filings/ (use "earnings" with --items 2.02)')
     ap.add_argument('--user-agent', default=os.environ.get('SEC_USER_AGENT'))
     a = ap.parse_args()
@@ -55,6 +56,8 @@ def main():
     rows = rows[:a.years]
     out = HERE / 'companies' / a.name / 'filings' / a.subdir
     ex_pat = r'(ex|exhibit)[-_]?(21|22|99)' if a.items else r'(ex|exhibit)[-_]?(21|22)'
+    if a.exhibits:                                   # e.g. --exhibits 3 for charter and by-laws (EX-3.x); the lookahead stops '3' matching '31'
+        ex_pat = r'(ex|exhibit)[-_]?(' + '|'.join(re.escape(e.strip()) for e in a.exhibits.split(',')) + r')(?!\d)'
     out.mkdir(parents=True, exist_ok=True)
     manifest = []
     print(f"{sub['name']} (CIK {cik}): {len(rows)} annual report(s)")
@@ -77,10 +80,17 @@ def main():
                 print(f'  downloaded {dest.name}')
             manifest.append(dict(period=x['reportDate'], filed=x['filingDate'], form=x['form'], kind=kind, file=dest.name, url=base + fn))
     if manifest:
-        with open(out / f'{a.subdir}_manifest.csv', 'w', newline='', encoding='utf-8') as f:
-            w = csv.DictWriter(f, fieldnames=list(manifest[0]))
+        mpath = out / f'{a.subdir}_manifest.csv'
+        fields = list(manifest[0])
+        merged = {}                                   # merge with what is already there (keyed on file) so a run for one form (e.g. DEF 14A) does not wipe another's rows (10-K)
+        if mpath.exists():
+            with open(mpath, newline='', encoding='utf-8') as f:
+                merged = {r['file']: r for r in csv.DictReader(f)}
+        merged.update({m['file']: m for m in manifest})
+        with open(mpath, 'w', newline='', encoding='utf-8') as f:
+            w = csv.DictWriter(f, fieldnames=fields)
             w.writeheader()
-            w.writerows(manifest)
+            w.writerows(merged.values())
     print(f'Done. {len(manifest)} files in {out}')
 
 

@@ -79,8 +79,10 @@ subsidiary of a US filer; European entity filings via the registries). Needed bu
 - The 9 C's, each with 2-4 standing bullets in the template: 1 Character & Control (character only matters if you control the decisions: control, financial policy = dividends / buybacks / stated leverage stance, strategic intent = grow / hold / restructure / harvest / run off,
   track record with creditors); 2 Capacity; 3 Capital; 4 Collateral (incl. CDS deliverability); 5 Covenants (biggest concern: LEAKAGE, i.e. value leaving the creditor perimeter via restricted payments, unrestricted subsidiaries, drop-downs, priming debt);
   6 Classes; 7 Competition; 8 Contracts (how contracted the revenue is); 9 Correlation (business cyclicality and wrong-way risk between asset value and company failure; bears on recovery vs the 40% assumption). Bullets for C's 2-9 are first drafts.
+- Report STYLE: short bullets, verdict first, one line when nothing is unusual (e.g. 'Plain: widely held, one class, no controller'); words only on exceptions; no verification narrative (see the STYLE line in the template).
 - Order of work: ownership / control first (public does not mean widely held: dual-class shares can give one holder control, e.g. OPTU / Drahi), then the rest.
 - Tools: `financial_statements/download_filings.py` (credit agreements / indentures), `download_annual_reports.py <CIK> <folder>` (10-K + Exhibits 21/22; `--forms "DEF 14A"` for proxies; `--items 2.02 --subdir earnings` for earnings releases),
+  `credit_reports/make_chart.py <TICKER> [window]` (CDS vs equity chart from the cache of Matt's timeseries_slideshow_tool in claude_repos; plot function unchanged; run that tool's notebook first if the cache date is old),
   `data_pipeline/shared/cik_lookup.py` (CDS ticker -> CIK, writes `config/ticker_cik.csv`; rows with source 'manual' survive reruns). The SEC needs a contact string in the User-Agent, which the user supplies via `!` (never put the user's email in a command).
 
 

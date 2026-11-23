@@ -1,9 +1,17 @@
-# Credit report: <TICKER> (<reference entity name>)
+<h1 align="center"><b>Credit report: &lt;TICKER&gt; (&lt;reference entity name&gt;)</b></h1>
+
+<p align="center"><i>From <code>TEMPLATE.md</code>. Updated &lt;date&gt;. USD mm. Status: done / partial / todo. Filings in <code>financial_statements/companies/&lt;ticker&gt;/</code>.</i></p>
 
 Copy this file to `credit_reports/<TICKER>.md` and fill it in. Keep THIS file generic: no credit-specific content. Matt's 9 C's framework (2026-11-23). C's 2-9 bullets are first drafts, to be amended by Matt.
 Rules: each bullet gets an Answer and a Source (document, page / section); write "not found" rather than guessing; mark anything inferred as inferred. Do ownership / control first: it feeds Character.
+STYLE (Matt, 2026-11-23): short bullets, not paragraphs. Verdict first, one line; supporting facts as sub-bullets, a line each. If nothing is unusual, keep it to one line ("Plain: widely held, one class, no controller"); spend words only on exceptions and surprises. Keep tables only where numbers over time matter. Leave out how the number was checked (put a one-line data note at most). Sources can go in a single line per section.
+CITATIONS (Matt, 2026-11-23): footnote style. Put a small superscript number after any fact that matters or could be challenged (numbers, guidance, ownership, covenant terms): `<sup>1</sup>`. Numbering restarts in each section. End each section with one line: `Sources: 1) [10-K FY2025, Item 5](../financial_statements/companies/<t>/filings/annual/<file>.htm) · 2) ...`. Cite the section ("Item 5", "Section 6.01"), since the filings are HTML with no page numbers. Link the local file with a relative path (works on the shared drive; spaces as %20); filings are gitignored, so the links do not work on GitHub. Then run `python credit_reports/add_sec_links.py credit_reports/<TICKER>.md`, which adds the SEC URL beside each local link from the download manifests. Do not cite every line; own inferences are marked as such, not cited.
 
-## Header
+## Market snapshot
+<p align="center"><img src="charts/<TICKER>_cds_equity_1y.png" width="720"></p>
+(make it with `python credit_reports/make_chart.py <TICKER>`; needs a CDS + equity pairing in the timeseries tool's cache.) Three bullets: CDS and equity now vs 30 Sep and year-end; any step changes and what caused them; CDS vs equity-implied gap.
+
+## CDS reference & deliverables
 - CDS ticker / index: <market_cds_ticker> / <index>      Markit ticker: <...>      RED code: <...>
 - Reference entity (the CDS names this legal entity): <...>      Ultimate parent + CIK: <...>      Public / private: <...>
 - Debt of the reference entity (deliverable): <ISIN, coupon, maturity, amount>   Debt of OTHER group entities (not deliverable): <...>
@@ -18,7 +26,7 @@ Character only matters if you control the decisions: find who controls first, th
 3. **Strategic intent**: GROW (organic or M&A), HOLD, RESTRUCTURE / SHRINK, HARVEST cash, or RUN OFF. Drives bullet 2 and matters for CDS (growth / M&A can add debt before a credit event; run-off changes behaviour near default). Intent is what management WANTS; whether it CAN is Competition / Capacity / Contracts, so check they agree. Classify explicitly and quote the source.
    Answer it PER BUSINESS UNIT, and watch for anything "discontinued", held for sale, "legacy" or "non-core": a business that is discontinued or in run-off is a warning that it may be run for cash to fund a growth business, or sent into run-off or separated in a good-bank / bad-bank style split (legacy assets and liabilities in one vehicle, the franchise in another). No cash need leave the group for one class of creditors to lose out. Ask which creditor classes have a claim on the old business and which on the new, and whether management can redirect cash or assets between them (see Classes and Covenants bullet 1).
    - Answer:   - Source:
-4. **Track record with creditors**: history of treating creditors vs shareholders (past refinancings, liability management / uptier or drop-down deals, litigation, restatements, legacy-liability handling, guidance credibility).
+4. **Track record with creditors** (include: has the company ever separated a business or liability from the operating group, and who bore the cost?): history of treating creditors vs shareholders (past refinancings, liability management / uptier or drop-down deals, litigation, restatements, legacy-liability handling, guidance credibility).
    - Answer:   - Source:
 
 ## 2. Capacity (ability to service the debt from cash flow)
