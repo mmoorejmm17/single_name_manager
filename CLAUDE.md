@@ -62,6 +62,28 @@ which then cannot touch old dates. Analysis would read base + live together.
 Others running update_store is a possible future option, not a goal while the old missing data is being fixed. The pricing steps need the SYSTEM Python (Quantifi Toolkit, Excel); publish and the notebooks run in the project .venv.
 Where this file says `src/` or `cache/` below it predates the split: scripts are now in `data_pipeline/`, readers in `analysis/`, and the notebooks read `data/`.
 
+## GOAL: a notebook that walks me through ONE credit end to end (set 2026-11-22)
+Make the singles notebooks (`singles_notebooks/`, with `financial_statements/` feeding it) smart enough to help Matt work through a particular credit: given a ticker, assemble who the entity is,
+its CDS history and level vs peers/index, capital structure and debt (BQL snapshot), the legal documents (indentures, credit agreements, intercreditor) and financials, so the credit can be read
+and judged in one place. Reuses `capital_structure`, `debt_browser`, `financial_statements/` and the CDS store; nothing here is built as a single flow yet.
+FIRST CREDIT TO WORK THROUGH: **OI European Group BV** (CDS ticker `OI`, index XO).
+What `cds_mappings_final.csv` already gives for it (checked 2026-11-22): Markit `OI-Egp` (SNRFOR, EUR, MM14, coupon 500), RED `NTD74V` / pair `NTD74VAD2`, Bloomberg 5Y `OI EURO CDS EUR SR 5Y D14 Corp` (curve CY351713),
+the entity's own ISIN `XS2624554320`, bond proxy `OI 4 3/4 02/15/30` (ISIN USN6704RAK79, 400mm), the entity is PRIVATE (equity id `0533860D NA Equity`) and its ULTIMATE PARENT is O-I Glass (`OI US Equity`, public).
+It does NOT give: the bond/loan stack, covenants, guarantor structure, financials, or filings. Those must come from BQL (debt snapshot) and the filings (parent's SEC filings via EDGAR, since the BV is a
+subsidiary of a US filer; European entity filings via the registries). Needed builds: (1) a parent/subsidiary link (ticker -> ultimate parent -> CIK) so single_name_manager can find the parent's EDGAR filings;
+(2) a one-ticker "credit page" notebook pulling mappings row + CDS history + debt snapshot + doc list; (3) the financial_statements downloader for EDGAR/Europe (see its README).
+
+### Credit reports: the 9 C's framework (Matt's own, 2026-11-23). The TEMPLATE is separate from the per-credit REPORTS.
+- `credit_reports/TEMPLATE.md` is the generic template (keep it free of credit-specific content; Matt amends it). Each credit gets its own report, `credit_reports/<TICKER>.md`, made by copying the template and filling every bullet with Answer + Source
+  (write 'not found' rather than guess, mark inferences). Credit findings live in the report, NOT in this file. First report: `credit_reports/OI.md` (OI European Group BV, CDS ticker OI, index XO).
+- The 9 C's, each with 2-4 standing bullets in the template: 1 Character & Control (character only matters if you control the decisions: control, financial policy = dividends / buybacks / stated leverage stance, strategic intent = grow / hold / restructure / harvest / run off,
+  track record with creditors); 2 Capacity; 3 Capital; 4 Collateral (incl. CDS deliverability); 5 Covenants (biggest concern: LEAKAGE, i.e. value leaving the creditor perimeter via restricted payments, unrestricted subsidiaries, drop-downs, priming debt);
+  6 Classes; 7 Competition; 8 Contracts (how contracted the revenue is); 9 Correlation (business cyclicality and wrong-way risk between asset value and company failure; bears on recovery vs the 40% assumption). Bullets for C's 2-9 are first drafts.
+- Order of work: ownership / control first (public does not mean widely held: dual-class shares can give one holder control, e.g. OPTU / Drahi), then the rest.
+- Tools: `financial_statements/download_filings.py` (credit agreements / indentures), `download_annual_reports.py <CIK> <folder>` (10-K + Exhibits 21/22; `--forms "DEF 14A"` for proxies; `--items 2.02 --subdir earnings` for earnings releases),
+  `data_pipeline/shared/cik_lookup.py` (CDS ticker -> CIK, writes `config/ticker_cik.csv`; rows with source 'manual' survive reruns). The SEC needs a contact string in the User-Agent, which the user supplies via `!` (never put the user's email in a command).
+
+
 ## Definition: PRICED (revised 2026-10-25; supersedes the earlier 5-stat version)
 A single-name CDS curve point (name, date, maturity) is **priced** if it has EITHER
 - (1) `par_spread` AND `risky_pv01`  (coupon-free), OR

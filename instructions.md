@@ -15,7 +15,7 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install pandas numpy pyarrow ipykernel
 ```
-(Do not run `poetry install`: it also pulls the Bloomberg / Databricks packages that only the data owner needs.)
+(To only read the data, the line above is enough. `poetry install` also works and adds the Bloomberg / Databricks packages needed to update the data, see "Updating the base data" below.)
 
 ## Use it
 1. Open a notebook in `index_notebooks/` (or `singles_notebooks/`) and select the `.venv` kernel:
@@ -23,7 +23,7 @@ pip install pandas numpy pyarrow ipykernel
    - `dispersion.ipynb`: dispersion of all_upfront across an index over time.
    - `topN.ipynb`: share of the index's expected loss in the N widest names, two dates.
 2. Change the parameters in the notebook's parameter cell (INDEX, dates, N ...) and Run All.
-3. The first cell prints which snapshot you are reading, e.g. `data published 2026-10-26 08:34; prices through 2026-10-23`.
+3. The first cell prints which snapshot you are reading, in the form `data published <date time>; prices through <date>`. Check that the "prices through" date is as recent as you expect.
 
 ## Where the data is read from
 The data lives in a "store": a folder with `prices\`, `reference\`, `metrics\` and a `MANIFEST.json`. Today there is one store, `base`. The code looks, in order, at: the `CDS_DATA_DIR`
@@ -33,7 +33,13 @@ local copy, copy that `data\base` folder into the clone as `data\base`, or set `
 
 ## Ground rules
 - `analysis/` only reads data. It never writes, so you cannot damage the data store by running notebooks.
-- `data_pipeline/` builds and publishes the data (Bloomberg, Databricks, Quantifi, Excel add-in). Please do not run it for now; the owner is still fixing old missing data. Running `update_store` yourself may be allowed later.
+- `data_pipeline/` builds and publishes the data (Bloomberg, Databricks, Quantifi, Excel add-in). Please check with the owner before running it, since the owner is still fixing old missing data.
+
+## Updating the base data (only if you have the logins)
+The daily update is two steps, run with the system Python (it needs Quantifi and Excel): `python data_pipeline/daily/update.py`, then `python data_pipeline/shared/publish.py`.
+**It might fail if you are not logged in.** Before running, make sure you are logged in to Bloomberg (terminal open and signed in), Databricks (`databricks auth login --profile <your profile>`),
+and the Markit add-in in Excel (IHS Markit ribbon > Login). Without Bloomberg the Bloomberg steps fail; without Excel / Markit the add-in step is skipped with a message (or use `--no-addin`).
+Publishing overwrites `data\base` for everyone (the previous version is kept in `data\_previous`; `publish.py --restore` undoes it).
 - The data can change when the owner re-publishes. If numbers shift, compare the "data published" line at the top of the notebook.
 - Missing / approximated data is flagged in the notebook (red = no price, amber = wide name at a marked-down recovery, blue = re-priced from the other coupon, purple = Markit add-in).
   `CLAUDE.md` has the definitions (what "priced" means, how all_upfront, dispersion and top-N are computed).

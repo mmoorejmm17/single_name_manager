@@ -1,0 +1,560 @@
+market_cds_ticker,company_name,own_equity_ticker,parent_equity_ticker,public_equity_ticker,own_cik,own_cik_source,parent_cik,parent_cik_source,public_cik,public_cik_source
+RAKUGRO,Rakuten Group Inc,4755 JP Equity,4755 JP Equity,4755 JP Equity,0001294591,bloomberg,0001294591,bloomberg,0001294591,bloomberg
+SOFTGRO,SoftBank Group Corp,9984 JP Equity,9984 JP Equity,,0001065521,bloomberg,0001065521,bloomberg,,
+BAC,Bank of America Corp,BAC US Equity,BAC US Equity,BAC US Equity,0000070858,bloomberg,0000070858,bloomberg,0000070858,bloomberg
+C,Citigroup Inc,C US Equity,C US Equity,C US Equity,0000831001,bloomberg,0000831001,bloomberg,0000831001,bloomberg
+GS,Goldman Sachs Group Inc/The,GS US Equity,GS US Equity,GS US Equity,0000886982,bloomberg,0000886982,bloomberg,0000886982,bloomberg
+JPM,JPMorgan Chase & Co,JPM US Equity,JPM US Equity,JPM US Equity,0000019617,bloomberg,0000019617,bloomberg,0000019617,bloomberg
+MS,Morgan Stanley,MS US Equity,MS US Equity,MS US Equity,0000895421,bloomberg,0000895421,bloomberg,0000895421,bloomberg
+WFC,Wells Fargo & Co,WFC US Equity,WFC US Equity,WFC US Equity,0000072971,bloomberg,0000072971,bloomberg,0000072971,bloomberg
+BAHRAIN,Kingdom of Bahrain,3343879Z BI Equity,3343879Z BI Equity,,,,,,,
+BRAZIL,Federative Republic of Brazi,1323Z BZ Equity,1323Z BZ Equity,,0000205317,bloomberg,0000205317,bloomberg,,
+COLOM,Republic of Colombia,1153Z CB Equity,1153Z CB Equity,,0000917142,bloomberg,0000917142,bloomberg,,
+MEX,United Mexican States,1426Z MM Equity,1426Z MM Equity,,,,,,,
+PANAMA,Republic of Panama,3344634Z PP Equity,3344634Z PP Equity,,0000076027,bloomberg,0000076027,bloomberg,,
+PEMEX,Petroleos Mexicanos,1232Z MM Equity,1426Z MM Equity,,0000932782,bloomberg,,,,
+PETBRA,Petroleo Brasileiro SA - Pet,PETR4 BZ Equity,PETR4 BZ Equity,,0001119639,bloomberg,0001119639,bloomberg,,
+SOAF,Republic of South Africa,50184Z SJ Equity,50184Z SJ Equity,,,,,,,
+TURKEY,Republic of Turkiye/The,114144Z TI Equity,114144Z TI Equity,,0000869687,bloomberg,0000869687,bloomberg,,
+ENTLN,Ladbrokes Coral Group Ltd,LCL LN Equity,ENT LN Equity,GMVHY US Equity,0001688747,bloomberg,,,,
+SDFGR,K+S AG,SDF GR Equity,SDF GR Equity,KPLUY US Equity,0001455431,bloomberg,0001455431,bloomberg,0001455431,bloomberg
+STGATE,Stonegate Pub Co Financing L,0966706D LN Equity,277924Z LN Equity,,,,0001408159,bloomberg,,
+APODS,Apollo Debt Solutions BDC,2112305D US Equity,2112305D US Equity,,0001837532,bloomberg,0001837532,bloomberg,,
+ARCC,Ares Capital Corp,ARCC US Equity,ARCC US Equity,ARCC US Equity,0001287750,bloomberg,0001287750,bloomberg,0001287750,bloomberg
+BCRED,Blackstone Private Credit Fu,BPCF US Equity,BX US Equity,,0001803498,bloomberg,0001393818,bloomberg,,
+CFG,Citizens Financial Group Inc,CFG US Equity,CFG US Equity,CFG US Equity,0000759944,bloomberg,0000759944,bloomberg,0000759944,bloomberg
+CM,Canadian Imperial Bank of Co,CM CN Equity,CM CN Equity,CM US Equity,0001045520,bloomberg,0001045520,bloomberg,0001045520,bloomberg
+EQR,ERP Operating LP,5814Z US Equity,VMRK US Equity,VMRK US Equity,0000931182,bloomberg,0000906107,bloomberg,0000906107,bloomberg
+HIG,Hartford Insurance Group Inc,HIG US Equity,HIG US Equity,HIG US Equity,0000874766,bloomberg,0000874766,bloomberg,0000874766,bloomberg
+JEF,Jefferies Group LLC,1621134D US Equity,JEF US Equity,JEF US Equity,0001084580,bloomberg,0000096223,bloomberg,0000096223,bloomberg
+MMC,Marsh & McLennan Cos Inc,MRSH US Equity,MRSH US Equity,MRSH US Equity,0000062709,bloomberg,0000062709,bloomberg,0000062709,bloomberg
+MTB,M&T Bank Corp,MTB US Equity,MTB US Equity,MTB US Equity,0000036270,bloomberg,0000036270,bloomberg,0000036270,bloomberg
+SYF,Synchrony Financial,SYF US Equity,SYF US Equity,SYF US Equity,0001601712,bloomberg,0001601712,bloomberg,0001601712,bloomberg
+TFC,Truist Financial Corp,TFC US Equity,TFC US Equity,TFC US Equity,0000092230,bloomberg,0000092230,bloomberg,0000092230,bloomberg
+USB,US Bancorp,USB US Equity,USB US Equity,USB US Equity,0000036104,bloomberg,0000036104,bloomberg,0000036104,bloomberg
+AAL,American Airlines Group Inc,AAL US Equity,AAL US Equity,AAL US Equity,0000006201,bloomberg,0000006201,bloomberg,0000006201,bloomberg
+ADT,ADT Security Corp/The,1566019D US Equity,ADT US Equity,ADT US Equity,0001546640,bloomberg,0001703056,bloomberg,0001703056,bloomberg
+ALIANT,Alliant Holdings Intermediat,1426133D US Equity,1339681D US Equity,,,,0001651368,bloomberg,,
+AMKR,Amkor Technology Inc,AMKR US Equity,AMKR US Equity,AMKR US Equity,0001047127,bloomberg,0001047127,bloomberg,0001047127,bloomberg
+ARMK,Aramark Services Inc,2387Z US Equity,ARMK US Equity,ARMK US Equity,0000007032,bloomberg,0001584509,bloomberg,0001584509,bloomberg
+ASH,Ashland LLC,1440117D US Equity,ASH US Equity,ASH US Equity,0001305014,bloomberg,0001674862,bloomberg,0001674862,bloomberg
+ASUCOR,Asurion LLC,642868Z US Equity,0616976D US Equity,,,,,,,
+AVNT,Avient Corp,AVNT US Equity,AVNT US Equity,AVNT US Equity,0001122976,bloomberg,0001122976,bloomberg,0001122976,bloomberg
+AXL,American Axle & Manufacturin,15863Z US Equity,DCH US Equity,DCH US Equity,0001084331,bloomberg,0001062231,bloomberg,0001062231,bloomberg
+BALL,Ball Corp,BALL US Equity,BALL US Equity,BALL US Equity,0000009389,bloomberg,0000009389,bloomberg,0000009389,bloomberg
+BBWI,Bath & Body Works Inc,BBWI US Equity,BBWI US Equity,BBWI US Equity,0000701985,bloomberg,0000701985,bloomberg,0000701985,bloomberg
+BHCCN,Bausch Health Cos Inc,BHC CN Equity,BHC CN Equity,BHC US Equity,0000885590,bloomberg,0000885590,bloomberg,0000885590,bloomberg
+BMCAUS,Standard Building Solutions,2232690D US Equity,0205869D US Equity,,,,0001700785,bloomberg,,
+BOMB,Bombardier Inc,BBD/B CN Equity,BBD/B CN Equity,BDRBF US Equity,,,,,,
+BYD,Boyd Gaming Corp,BYD US Equity,BYD US Equity,BYD US Equity,0000906553,bloomberg,0000906553,bloomberg,0000906553,bloomberg
+BZH,Beazer Homes USA Inc,BZH US Equity,DFH US Equity,BZH US Equity,0000915840,bloomberg,0001825088,bloomberg,0000915840,bloomberg
+CAR,Avis Budget Group Inc,CAR US Equity,CAR US Equity,CAR US Equity,0000723612,bloomberg,0000723612,bloomberg,0000723612,bloomberg
+CCL,Carnival Corp Ltd,CCL US Equity,CCL US Equity,CCL US Equity,0000815097,bloomberg,0000815097,bloomberg,0000815097,bloomberg
+CCO,Clear Channel Outdoor Holdin,CCO US Equity,1022337Z UH Equity,CCO US Equity,0001334978,bloomberg,,,0001334978,bloomberg
+CCO_H,CCO Holdings LLC,3247519Z US Equity,CHTR US Equity,CHTR US Equity,0001271833,bloomberg,0001091667,bloomberg,0001091667,bloomberg
+CE,Celanese US Holdings LLC,3551617Z US Equity,CE US Equity,CE US Equity,0001314514,bloomberg,0001306830,bloomberg,0001306830,bloomberg
+CLF,Cleveland-Cliffs Inc,CLF US Equity,CLF US Equity,CLF US Equity,0000764065,bloomberg,0000764065,bloomberg,0000764065,bloomberg
+CRGYFN,Crescent Energy Finance LLC,1884422D US Equity,CRGY US Equity,CRGY US Equity,,,0001866175,bloomberg,0001866175,bloomberg
+CRWV,CoreWeave Inc,CRWV US Equity,CRWV US Equity,CRWV US Equity,0001769628,bloomberg,0001769628,bloomberg,0001769628,bloomberg
+CSCHLD,CSC Holdings LLC,12910Z US Equity,OPTU US Equity,OPTU US Equity,0000784681,bloomberg,0001702780,bloomberg,0001702780,bloomberg
+CVNA,Carvana Co,CVNA US Equity,CVNA US Equity,CVNA US Equity,0001690820,bloomberg,0001690820,bloomberg,0001690820,bloomberg
+CYH,Community Health Systems Inc,CYH US Equity,CYH US Equity,CYH US Equity,0001108109,bloomberg,0001108109,bloomberg,0001108109,bloomberg
+CZR,Caesars Entertainment Inc,CZR US Equity,CZR US Equity,CZR US Equity,0001590895,bloomberg,0001590895,bloomberg,0001590895,bloomberg
+DISH,DISH DBS Corp,56938Z US Equity,ECHO US Equity,SATS US Equity,0001042642,bloomberg,0001415404,bloomberg,0001920406,sec_tickers
+DVA,DaVita Inc,DVA US Equity,DVA US Equity,DVA US Equity,0000927066,bloomberg,0000927066,bloomberg,0000927066,bloomberg
+FD,Macy's Inc,M US Equity,M US Equity,M US Equity,0000794367,bloomberg,0000794367,bloomberg,0000794367,bloomberg
+FREMOR,Freedom Mortgage Holdings LL,2367991D US Equity,2623783D US Equity,,,,,,,
+GAP,Gap Inc/The,GAP US Equity,GAP US Equity,GAP US Equity,0000039911,bloomberg,0000039911,bloomberg,0000039911,bloomberg
+GFLCN,GFL Environmental Inc,GFL CN Equity,GFL CN Equity,GFL US Equity,0001780232,bloomberg,0001780232,bloomberg,0001780232,bloomberg
+GNW,Genworth Holdings Inc,0860323D US Equity,GNW US Equity,GNW US Equity,0001572983,bloomberg,0001276520,bloomberg,0001276520,bloomberg
+GT,Goodyear Tire & Rubber Co/Th,GT US Equity,GT US Equity,GT US Equity,0000042582,bloomberg,0000042582,bloomberg,0000042582,bloomberg
+GTN,Gray Media Inc,GTN US Equity,GTN US Equity,GTN US Equity,0000043196,bloomberg,0000043196,bloomberg,0000043196,bloomberg
+HBGCN,HUB International Ltd,HBG US Equity,1069067D US Equity,,0001133016,bloomberg,0001775042,bloomberg,,
+HILCRP,Hilcorp Energy I LP,0810898D US Equity,107652Z US Equity,,,,,,,
+HLT,Hilton Domestic Operating Co,1432097D US Equity,HLT US Equity,HLT US Equity,0001708510,bloomberg,0001585689,bloomberg,0001585689,bloomberg
+HOUS,Anywhere Real Estate Group L,3362726Q US Equity,COMP US Equity,COMP US Equity,0001355001,bloomberg,0001563190,bloomberg,0001563190,bloomberg
+HOV,K Hovnanian Enterprises Inc,15657Z US Equity,HOV US Equity,HOV US Equity,0000833199,bloomberg,0000357294,bloomberg,0000357294,bloomberg
+HTZ,Hertz Corp/The,766481Z US Equity,HTZ US Equity,HTZ US Equity,0000047129,bloomberg,0001657853,bloomberg,0001657853,bloomberg
+IHRT,iHeartCommunications Inc,2968900Q US Equity,IHRT US Equity,IHRT US Equity,0000739708,bloomberg,0001400891,bloomberg,0001400891,bloomberg
+IRM,Iron Mountain Inc,IRM US Equity,IRM US Equity,IRM US Equity,0001020569,bloomberg,0001020569,bloomberg,0001020569,bloomberg
+JWN,Nordstrom Inc,JWN US Equity,JWN US Equity,,0000072333,bloomberg,0000072333,bloomberg,,
+KBH,KB Home,KBH US Equity,KBH US Equity,KBH US Equity,0000795266,bloomberg,0000795266,bloomberg,0000795266,bloomberg
+KSS,Kohl's Corp,KSS US Equity,KSS US Equity,KSS US Equity,0000885639,bloomberg,0000885639,bloomberg,0000885639,bloomberg
+LUMN,Lumen Technologies Inc,LUMN US Equity,LUMN US Equity,LUMN US Equity,0000018926,bloomberg,0000018926,bloomberg,0000018926,bloomberg
+LW,Lamb Weston Holdings Inc,LW US Equity,LW US Equity,LW US Equity,0001679273,bloomberg,0001679273,bloomberg,0001679273,bloomberg
+MBI AA,MBIA Inc,MBI US Equity,MBI US Equity,MBI US Equity,0000814585,bloomberg,0000814585,bloomberg,0000814585,bloomberg
+MEDIND,Medline Borrower LP,1920261D US Equity,MDLN US Equity,,,,0002046386,bloomberg,,
+MGM,MGM Resorts International,MGM US Equity,MGM US Equity,MGM US Equity,0000789570,bloomberg,0000789570,bloomberg,0000789570,bloomberg
+MOH,Molina Healthcare Inc,MOH US Equity,MOH US Equity,MOH US Equity,0001179929,bloomberg,0001179929,bloomberg,0001179929,bloomberg
+MPW,MPT Operating Partnership LP,0750910D US Equity,MPT US Equity,MPT US Equity,0001524607,bloomberg,0001287865,bloomberg,0001287865,bloomberg
+MUR,Murphy Oil Corp,MUR US Equity,MUR US Equity,MUR US Equity,0000717423,bloomberg,0000717423,bloomberg,0000717423,bloomberg
+NAVI,Navient Corp,NAVI US Equity,NAVI US Equity,NAVI US Equity,0002152623,bloomberg,0002152623,bloomberg,0002152623,bloomberg
+NBR,Nabors Industries Inc,347334Z US Equity,NBR US Equity,NBR US Equity,0000798943,bloomberg,0001163739,bloomberg,0001163739,bloomberg
+NCLH,NCL Corp Ltd,1789Q US Equity,NCLH US Equity,NCLH US Equity,0001318742,bloomberg,0001513761,bloomberg,0001513761,bloomberg
+NEWALB,New Albertson's Inc,3194014Z US Equity,ACI US Equity,ACI US Equity,0001355833,bloomberg,0001646972,bloomberg,0001646972,bloomberg
+NRG,NRG Energy Inc,NRG US Equity,NRG US Equity,NRG US Equity,0001013871,bloomberg,0001013871,bloomberg,0001013871,bloomberg
+NWL,Newell Brands Inc,NWL US Equity,NWL US Equity,NWL US Equity,0000814453,bloomberg,0000814453,bloomberg,0000814453,bloomberg
+OGN,Organon & Co,OGN US Equity,OGN US Equity,OGN US Equity,0001821825,bloomberg,0001821825,bloomberg,0001821825,bloomberg
+OLN,Olin Corp,OLN US Equity,OLN US Equity,OLN US Equity,0000074303,bloomberg,0000074303,bloomberg,0000074303,bloomberg
+OMF,OneMain Finance Corp,AGC1 US Equity,OMF US Equity,OMF US Equity,0000025598,bloomberg,0001584207,bloomberg,0001584207,bloomberg
+PARA,Paramount Global,2677689D US Equity,SKYD US Equity,PSKY US Equity,0000813828,bloomberg,0002041610,bloomberg,0002041610,bloomberg
+PBI,Pitney Bowes Inc,PBI US Equity,PBI US Equity,PBI US Equity,0000078814,bloomberg,0000078814,bloomberg,0000078814,bloomberg
+PCG,PG&E Corp,PCG US Equity,PCG US Equity,PCG US Equity,0001004980,bloomberg,0001004980,bloomberg,0001004980,bloomberg
+PFSI,PennyMac Financial Services,PFSI US Equity,PFSI US Equity,PFSI US Equity,0001745916,bloomberg,0001745916,bloomberg,0001745916,bloomberg
+POST,Post Holdings Inc,POST US Equity,POST US Equity,POST US Equity,0001530950,bloomberg,0001530950,bloomberg,0001530950,bloomberg
+RGCARE,LifePoint Health Inc,1341684D US Equity,APO US Equity,,0001468005,bloomberg,0001858681,bloomberg,,
+RIG,Transocean International Ltd,3196976Z KY Equity,RIG US Equity,RIG US Equity,0001083269,bloomberg,0001451505,bloomberg,0001451505,bloomberg
+RRD,RR Donnelley & Sons Co,RRD US Equity,0221781D US Equity,,0000029669,bloomberg,0001511989,bloomberg,,
+SABHLD,Sabre Holdings Corp,1528159D US Equity,SABR US Equity,SABR US Equity,0001020265,bloomberg,0001597033,bloomberg,0001597033,bloomberg
+SEE,Sealed Air Corp,SEE US Equity,5056Z US Equity,SEE US Equity,0001012100,bloomberg,0001538642,bloomberg,0001012100,bloomberg
+SIRI,Sirius XM Radio LLC,0968009D US Equity,SIRI US Equity,SIRI US Equity,0001592709,bloomberg,0000908937,bloomberg,0000908937,bloomberg
+SM,SM Energy Co,SM US Equity,SM US Equity,SM US Equity,0000893538,bloomberg,0000893538,bloomberg,0000893538,bloomberg
+SPLS,Staples Inc,2619871D US Equity,9875574Z US Equity,,0000791519,bloomberg,,,,
+SVC,Service Properties Trust,SVC US Equity,SVC US Equity,SVC US Equity,0000945394,bloomberg,0000945394,bloomberg,0000945394,bloomberg
+SWY,Safeway Inc,SWY US Equity,ACI US Equity,ACI US Equity,0000086144,bloomberg,0001646972,bloomberg,0001646972,bloomberg
+TDG,TransDigm Inc,13712Z US Equity,TDG US Equity,TDG US Equity,0001077670,bloomberg,0001260221,bloomberg,0001260221,bloomberg
+TEVA,Teva Pharmaceutical Industri,TEVA IT Equity,TEVA IT Equity,TEVA US Equity,0000818686,bloomberg,0000818686,bloomberg,0000818686,bloomberg
+THC,Tenet Healthcare Corp,THC US Equity,THC US Equity,THC US Equity,0000070318,bloomberg,0000070318,bloomberg,0000070318,bloomberg
+TIBX,Cloud Software Group LLC,TIBX US Equity,2366642D US Equity,,0001085280,bloomberg,,,,
+UAL,United Airlines Holdings Inc,UAL US Equity,UAL US Equity,UAL US Equity,0000100517,bloomberg,0000100517,bloomberg,0000100517,bloomberg
+UFS,Domtar Corp,UFS US Equity,2596985D US Equity,,0001381531,bloomberg,,,,
+UHS,Universal Health Services In,UHS US Equity,UHS US Equity,UHS US Equity,0000352915,bloomberg,0000352915,bloomberg,0000352915,bloomberg
+UIS,Unisys Corp,UIS US Equity,UIS US Equity,UIS US Equity,0000746838,bloomberg,0000746838,bloomberg,0000746838,bloomberg
+UNIT,Uniti Group LLC,2689150D US Equity,UNIT US Equity,UNIT US Equity,,,0002020795,sec_tickers,0002020795,sec_tickers
+URI,United Rentals North America,16790Z US Equity,URI US Equity,URI US Equity,0001047166,bloomberg,0001067701,bloomberg,0001067701,bloomberg
+UVN,Univision Communications Inc,1293405D US Equity,2056675D MM Equity,TV US Equity,0001017008,bloomberg,,,0000912892,bloomberg
+VENLNG,Venture Global LNG Inc,1216765D US Equity,VG US Equity,VG US Equity,,,0002007855,bloomberg,0002007855,bloomberg
+VST,Vistra Operations Co LLC,1447888D US Equity,VST US Equity,VST US Equity,0001746576,bloomberg,0001692819,bloomberg,0001692819,bloomberg
+WBD,Discovery Global Holdings In,2020368D US Equity,SKYD US Equity,,0001889658,bloomberg,0002041610,bloomberg,,
+WFRD,Weatherford International Lt,0531872D US Equity,WFRD US Equity,WFRD US Equity,0001170565,bloomberg,0001603923,bloomberg,0001603923,bloomberg
+WHR,Whirlpool Corp,WHR US Equity,WHR US Equity,WHR US Equity,0000106640,bloomberg,0000106640,bloomberg,0000106640,bloomberg
+XPLR,XPLR Infrastructure Operatin,1025384D US Equity,NEE US Equity,,,,0000753308,bloomberg,,
+XRX,Xerox Corp,9991234D US Equity,XRX US Equity,XRX US Equity,0000108772,bloomberg,0001770450,bloomberg,0001770450,bloomberg
+YUM,Yum! Brands Inc,YUM US Equity,YUM US Equity,YUM US Equity,0001041061,bloomberg,0001041061,bloomberg,0001041061,bloomberg
+COMM,Vistance Networks Holdings L,1074528D US Equity,VISN US Equity,VISN US Equity,0001035884,bloomberg,0001517228,bloomberg,0001517228,bloomberg
+COOP,Nationstar Mortgage Holdings,NSM US Equity,RKT US Equity,RKT US Equity,0001520566,bloomberg,0001805284,bloomberg,0001805284,bloomberg
+CPN,Calpine LLC,CPN US Equity,CEG US Equity,,0000916457,bloomberg,0001868275,bloomberg,,
+EQT,EQT Corp,EQT US Equity,EQT US Equity,EQT US Equity,0000033213,bloomberg,0000033213,bloomberg,0000033213,bloomberg
+EXE,Expand Energy Corp,EXE US Equity,EXE US Equity,EXE US Equity,0000895126,bloomberg,0000895126,bloomberg,0000895126,bloomberg
+FYBR,Frontier Communications Hold,1885518D US Equity,VZ US Equity,,,,0000732712,bloomberg,,
+LPX,Louisiana-Pacific Corp,LPX US Equity,LPX US Equity,LPX US Equity,0000060519,bloomberg,0000060519,bloomberg,0000060519,bloomberg
+NCX,NOVA Chemicals Corp,0339293Q CN Equity,1022337Z UH Equity,,0000922960,bloomberg,,,,
+PTV,Pactiv LLC,PTV US Equity,2005394D US Equity,,0001089976,bloomberg,,,,
+TGNA,TEGNA Inc,TGNA US Equity,NXST US Equity,TGNA US Equity,0000039899,bloomberg,0001142417,bloomberg,0000039899,bloomberg
+WBA,Walgreens Boots Alliance Inc,WBA US Equity,9875574Z US Equity,,0001618921,bloomberg,,,,
+X,United States Steel Corp,X US Equity,5401 JP Equity,,0001163302,bloomberg,0001140471,bloomberg,,
+ABBV,AbbVie Inc,ABBV US Equity,ABBV US Equity,ABBV US Equity,0001551152,bloomberg,0001551152,bloomberg,0001551152,bloomberg
+ABX,Barrick Mining Corp,ABX CN Equity,ABX CN Equity,B US Equity,0000756894,bloomberg,0000756894,bloomberg,0000756894,bloomberg
+AEP,American Electric Power Co I,AEP US Equity,AEP US Equity,AEP US Equity,0000004904,bloomberg,0000004904,bloomberg,0000004904,bloomberg
+AES,AES Corp/The,AES US Equity,AES US Equity,AES US Equity,0000874761,bloomberg,0000874761,bloomberg,0000874761,bloomberg
+AIG,American International Group,AIG US Equity,AIG US Equity,AIG US Equity,0000005272,bloomberg,0000005272,bloomberg,0000005272,bloomberg
+ALL,Allstate Corp/The,ALL US Equity,ALL US Equity,ALL US Equity,0000899051,bloomberg,0000899051,bloomberg,0000899051,bloomberg
+ALLY,Ally Financial Inc,ALLY US Equity,ALLY US Equity,ALLY US Equity,0000040729,bloomberg,0000040729,bloomberg,0000040729,bloomberg
+AMD,Advanced Micro Devices Inc,AMD US Equity,AMD US Equity,AMD US Equity,0000002488,bloomberg,0000002488,bloomberg,0000002488,bloomberg
+AMGN,Amgen Inc,AMGN US Equity,AMGN US Equity,AMGN US Equity,0000318154,bloomberg,0000318154,bloomberg,0000318154,bloomberg
+AMZN,Amazon.com Inc,AMZN US Equity,AMZN US Equity,AMZN US Equity,0001018724,bloomberg,0001018724,bloomberg,0001018724,bloomberg
+APA,APA Corp,APA US Equity,APA US Equity,APA US Equity,0001841666,bloomberg,0001841666,bloomberg,0001841666,bloomberg
+ARW,Arrow Electronics Inc,ARW US Equity,ARW US Equity,ARW US Equity,0000007536,bloomberg,0000007536,bloomberg,0000007536,bloomberg
+AVGO,Broadcom Inc,AVGO US Equity,AVGO US Equity,AVGO US Equity,0001730168,bloomberg,0001730168,bloomberg,0001730168,bloomberg
+AVT,Avnet Inc,AVT US Equity,AVT US Equity,AVT US Equity,0000008858,bloomberg,0000008858,bloomberg,0000008858,bloomberg
+AXP,American Express Co,AXP US Equity,AXP US Equity,AXP US Equity,0000004962,bloomberg,0000004962,bloomberg,0000004962,bloomberg
+AZO,AutoZone Inc,AZO US Equity,AZO US Equity,AZO US Equity,0000866787,bloomberg,0000866787,bloomberg,0000866787,bloomberg
+BA,Boeing Co/The,BA US Equity,BA US Equity,BA US Equity,0000012927,bloomberg,0000012927,bloomberg,0000012927,bloomberg
+BAX,Baxter International Inc,BAX US Equity,BAX US Equity,BAX US Equity,0000010456,bloomberg,0000010456,bloomberg,0000010456,bloomberg
+BBY,Best Buy Co Inc,BBY US Equity,BBY US Equity,BBY US Equity,0000764478,bloomberg,0000764478,bloomberg,0000764478,bloomberg
+BMY,Bristol-Myers Squibb Co,BMY US Equity,BMY US Equity,BMY US Equity,0000014272,bloomberg,0000014272,bloomberg,0000014272,bloomberg
+BSX,Boston Scientific Corp,BSX US Equity,BSX US Equity,BSX US Equity,0000885725,bloomberg,0000885725,bloomberg,0000885725,bloomberg
+BWA,BorgWarner Inc,BWA US Equity,BWA US Equity,BWA US Equity,0000908255,bloomberg,0000908255,bloomberg,0000908255,bloomberg
+CAG,Conagra Brands Inc,CAG US Equity,CAG US Equity,CAG US Equity,0000023217,bloomberg,0000023217,bloomberg,0000023217,bloomberg
+CAH,Cardinal Health Inc,CAH US Equity,CAH US Equity,CAH US Equity,0000721371,bloomberg,0000721371,bloomberg,0000721371,bloomberg
+CAT,Caterpillar Inc,CAT US Equity,CAT US Equity,CAT US Equity,0000018230,bloomberg,0000018230,bloomberg,0000018230,bloomberg
+CI,Cigna Group/The,CI US Equity,CI US Equity,CI US Equity,0001739940,bloomberg,0001739940,bloomberg,0001739940,bloomberg
+CMCSA,Comcast Corp,CMCSA US Equity,CMCSA US Equity,CMCSA US Equity,0001166691,bloomberg,0001166691,bloomberg,0001166691,bloomberg
+CNQCN,Canadian Natural Resources L,CNQ CN Equity,CNQ CN Equity,CNQ US Equity,0001017413,bloomberg,0001017413,bloomberg,0001017413,bloomberg
+COF,Capital One Financial Corp,COF US Equity,COF US Equity,COF US Equity,0000927628,bloomberg,0000927628,bloomberg,0000927628,bloomberg
+COP,ConocoPhillips,COP US Equity,COP US Equity,COP US Equity,0001163165,bloomberg,0001163165,bloomberg,0001163165,bloomberg
+COX,Cox Communications LLC,COX US Equity,CHTR US Equity,,,,0001091667,bloomberg,,
+CPB,Campbell's Company/The,CPB US Equity,CPB US Equity,CPB US Equity,0000016732,bloomberg,0000016732,bloomberg,0000016732,bloomberg
+CSCO,Cisco Systems Inc/California,9654321D US Equity,CSCO US Equity,CSCO US Equity,,,0000858877,bloomberg,0000858877,bloomberg
+CSX,CSX Corp,CSX US Equity,CSX US Equity,CSX US Equity,0000277948,bloomberg,0000277948,bloomberg,0000277948,bloomberg
+CVS,CVS Health Corp,CVS US Equity,CVS US Equity,CVS US Equity,0000064803,bloomberg,0000064803,bloomberg,0000064803,bloomberg
+D,Dominion Energy Inc,D US Equity,D US Equity,D US Equity,0000715957,bloomberg,0000715957,bloomberg,0000715957,bloomberg
+DAL,Delta Air Lines Inc,DAL US Equity,DAL US Equity,DAL US Equity,0000027904,bloomberg,0000027904,bloomberg,0000027904,bloomberg
+DE,Deere & Co,DE US Equity,DE US Equity,DE US Equity,0000315189,bloomberg,0000315189,bloomberg,0000315189,bloomberg
+DELL,Dell Inc,1683997D US Equity,DELL US Equity,DELL US Equity,0000826083,bloomberg,0001571996,bloomberg,0001571996,bloomberg
+DGX,Quest Diagnostics Inc,DGX US Equity,DGX US Equity,DGX US Equity,0001022079,bloomberg,0001022079,bloomberg,0001022079,bloomberg
+DHI,DR Horton Inc,DHI US Equity,DHI US Equity,DHI US Equity,0000882184,bloomberg,0000882184,bloomberg,0000882184,bloomberg
+DHR,Danaher Corp,DHR US Equity,DHR US Equity,DHR US Equity,0000313616,bloomberg,0000313616,bloomberg,0000313616,bloomberg
+DIS,Walt Disney Co/The,DIS US Equity,DIS US Equity,DIS US Equity,0001744489,bloomberg,0001744489,bloomberg,0001744489,bloomberg
+DOW,Dow Chemical Co/The,1697067D US Equity,DOW US Equity,DOW US Equity,0000029915,bloomberg,0001751788,bloomberg,0001751788,bloomberg
+DRI,Darden Restaurants Inc,DRI US Equity,DRI US Equity,DRI US Equity,0000940944,bloomberg,0000940944,bloomberg,0000940944,bloomberg
+DVN,Devon Energy Corp,DVN US Equity,DVN US Equity,DVN US Equity,0001090012,bloomberg,0001090012,bloomberg,0001090012,bloomberg
+DXC,DXC Technology Co,DXC US Equity,DXC US Equity,DXC US Equity,0001688568,bloomberg,0001688568,bloomberg,0001688568,bloomberg
+ELV,Elevance Health Inc,ELV US Equity,ELV US Equity,ELV US Equity,0001156039,bloomberg,0001156039,bloomberg,0001156039,bloomberg
+EMN,Eastman Chemical Co,EMN US Equity,EMN US Equity,EMN US Equity,0000915389,bloomberg,0000915389,bloomberg,0000915389,bloomberg
+ENBCN,Enbridge Inc,ENB CN Equity,ENB CN Equity,ENB US Equity,0000895728,bloomberg,0000895728,bloomberg,0000895728,bloomberg
+ET,Energy Transfer LP,ET US Equity,ET US Equity,ET US Equity,0001276187,bloomberg,0001276187,bloomberg,0001276187,bloomberg
+EXC,Exelon Corp,EXC US Equity,EXC US Equity,EXC US Equity,0001109357,bloomberg,0001109357,bloomberg,0001109357,bloomberg
+EXPE,Expedia Group Inc,EXPE US Equity,EXPE US Equity,EXPE US Equity,0001324424,bloomberg,0001324424,bloomberg,0001324424,bloomberg
+FCO,Ford Motor Co,F US Equity,F US Equity,F US Equity,0000037996,bloomberg,0000037996,bloomberg,0000037996,bloomberg
+FCX,Freeport-McMoRan Inc,FCX US Equity,FCX US Equity,FCX US Equity,0000831259,bloomberg,0000831259,bloomberg,0000831259,bloomberg
+FDX,FedEx Corp,FDX US Equity,FDX US Equity,FDX US Equity,0001048911,bloomberg,0001048911,bloomberg,0001048911,bloomberg
+FE,FirstEnergy Corp,FE US Equity,FE US Equity,FE US Equity,0001031296,bloomberg,0001031296,bloomberg,0001031296,bloomberg
+GE,General Electric Co,GE US Equity,GE US Equity,GE US Equity,0000040545,bloomberg,0000040545,bloomberg,0000040545,bloomberg
+GIS,General Mills Inc,GIS US Equity,GIS US Equity,GIS US Equity,0000040704,bloomberg,0000040704,bloomberg,0000040704,bloomberg
+GM,General Motors Co,GM US Equity,GM US Equity,GM US Equity,0001467858,bloomberg,0001467858,bloomberg,0001467858,bloomberg
+GOOG,Alphabet Inc,GOOGL US Equity,GOOGL US Equity,GOOGL US Equity,0001652044,bloomberg,0001652044,bloomberg,0001652044,bloomberg
+HAL,Halliburton Co,HAL US Equity,HAL US Equity,HAL US Equity,0000045012,bloomberg,0000045012,bloomberg,0000045012,bloomberg
+HCA,HCA Inc,8131761Z US Equity,HCA US Equity,HCA US Equity,0000732872,bloomberg,0000860730,bloomberg,0000860730,bloomberg
+HD,Home Depot Inc/The,HD US Equity,HD US Equity,HD US Equity,0000354950,bloomberg,0000354950,bloomberg,0000354950,bloomberg
+HON,Honeywell International Inc,HON US Equity,HON US Equity,HON US Equity,0000773840,bloomberg,0000773840,bloomberg,0000773840,bloomberg
+HPQ,HP Inc,HPQ US Equity,HPQ US Equity,HPQ US Equity,0000047217,bloomberg,0000047217,bloomberg,0000047217,bloomberg
+HRB,Block Financial LLC,4964Z US Equity,HRB US Equity,HRB US Equity,0001042397,bloomberg,0000012659,bloomberg,0000012659,bloomberg
+HST,Host Hotels & Resorts LP,3662106Z US Equity,HST US Equity,HST US Equity,0001061937,bloomberg,0001070750,bloomberg,0001070750,bloomberg
+IBM,International Business Machi,IBM US Equity,IBM US Equity,IBM US Equity,0000051143,bloomberg,0000051143,bloomberg,0000051143,bloomberg
+INTC,Intel Corp,INTC US Equity,INTC US Equity,INTC US Equity,0000050863,bloomberg,0000050863,bloomberg,0000050863,bloomberg
+IP,International Paper Co,IP US Equity,IP US Equity,IP US Equity,0000051434,bloomberg,0000051434,bloomberg,0000051434,bloomberg
+JCI,Johnson Controls Internation,JCI US Equity,JCI US Equity,JCI US Equity,0000833444,bloomberg,0000833444,bloomberg,0000833444,bloomberg
+JNJ,Johnson & Johnson,JNJ US Equity,JNJ US Equity,JNJ US Equity,0000200406,bloomberg,0000200406,bloomberg,0000200406,bloomberg
+KHC,Kraft Heinz Foods Co,HNZ US Equity,KHC US Equity,KHC US Equity,0000046640,bloomberg,0001637459,bloomberg,0001637459,bloomberg
+KMI,Kinder Morgan Inc,KMI US Equity,KMI US Equity,KMI US Equity,0001506307,bloomberg,0001506307,bloomberg,0001506307,bloomberg
+KR,Kroger Co/The,KR US Equity,KR US Equity,KR US Equity,0000056873,bloomberg,0000056873,bloomberg,0000056873,bloomberg
+LEN,Lennar Corp,LEN US Equity,LEN US Equity,LEN US Equity,0000920760,bloomberg,0000920760,bloomberg,0000920760,bloomberg
+LMT,Lockheed Martin Corp,LMT US Equity,LMT US Equity,LMT US Equity,0000936468,bloomberg,0000936468,bloomberg,0000936468,bloomberg
+LNC,Lincoln National Corp,LNC US Equity,LNC US Equity,LNC US Equity,0000059558,bloomberg,0000059558,bloomberg,0000059558,bloomberg
+LOW,Lowe's Cos Inc,LOW US Equity,LOW US Equity,LOW US Equity,0000060667,bloomberg,0000060667,bloomberg,0000060667,bloomberg
+LUV,Southwest Airlines Co,LUV US Equity,LUV US Equity,LUV US Equity,0000092380,bloomberg,0000092380,bloomberg,0000092380,bloomberg
+MCD,McDonald's Corp,MCD US Equity,MCD US Equity,MCD US Equity,0000063908,bloomberg,0000063908,bloomberg,0000063908,bloomberg
+MCK,McKesson Corp,MCK US Equity,MCK US Equity,MCK US Equity,0000927653,bloomberg,0000927653,bloomberg,0000927653,bloomberg
+MDLZ,Mondelez International Inc,MDLZ US Equity,MDLZ US Equity,MDLZ US Equity,0001103982,bloomberg,0001103982,bloomberg,0001103982,bloomberg
+MET,MetLife Inc,MET US Equity,MET US Equity,MET US Equity,0001099219,bloomberg,0001099219,bloomberg,0001099219,bloomberg
+META,Meta Platforms Inc,META US Equity,META US Equity,META US Equity,0001326801,bloomberg,0001326801,bloomberg,0001326801,bloomberg
+MO,Altria Group Inc,MO US Equity,MO US Equity,MO US Equity,0000764180,bloomberg,0000764180,bloomberg,0000764180,bloomberg
+MPC,Marathon Petroleum Corp,MPC US Equity,MPC US Equity,MPC US Equity,0001510295,bloomberg,0001510295,bloomberg,0001510295,bloomberg
+MSFT,Microsoft Corp,MSFT US Equity,MSFT US Equity,MSFT US Equity,0000789019,bloomberg,0000789019,bloomberg,0000789019,bloomberg
+MSI,Motorola Solutions Inc,MSI US Equity,MSI US Equity,MSI US Equity,0000068505,bloomberg,0000068505,bloomberg,0000068505,bloomberg
+NEE,NextEra Energy Capital Holdi,7410Z US Equity,NEE US Equity,NEE US Equity,0000794447,bloomberg,0000753308,bloomberg,0000753308,bloomberg
+NEM,Newmont Corp,NEM US Equity,NEM US Equity,NEM US Equity,0001164727,bloomberg,0001164727,bloomberg,0001164727,bloomberg
+NFLX,Netflix Inc,NFLX US Equity,NFLX US Equity,NFLX US Equity,0001065280,bloomberg,0001065280,bloomberg,0001065280,bloomberg
+NOC,Northrop Grumman Corp,NOC US Equity,NOC US Equity,NOC US Equity,0001133421,bloomberg,0001133421,bloomberg,0001133421,bloomberg
+OMC,Omnicom Group Inc,OMC US Equity,OMC US Equity,OMC US Equity,0000029989,bloomberg,0000029989,bloomberg,0000029989,bloomberg
+ORCL,Oracle Corp,ORCL US Equity,ORCL US Equity,ORCL US Equity,0001341439,bloomberg,0001341439,bloomberg,0001341439,bloomberg
+OVV,Ovintiv Inc,OVV US Equity,OVV US Equity,OVV US Equity,0001792580,bloomberg,0001792580,bloomberg,0001792580,bloomberg
+OXY,Occidental Petroleum Corp,OXY US Equity,OXY US Equity,OXY US Equity,0000797468,bloomberg,0000797468,bloomberg,0000797468,bloomberg
+PFE,Pfizer Inc,PFE US Equity,PFE US Equity,PFE US Equity,0000078003,bloomberg,0000078003,bloomberg,0000078003,bloomberg
+PG,Procter & Gamble Co/The,PG US Equity,PG US Equity,PG US Equity,0000080424,bloomberg,0000080424,bloomberg,0000080424,bloomberg
+PHM,PulteGroup Inc,PHM US Equity,PHM US Equity,PHM US Equity,0000822416,bloomberg,0000822416,bloomberg,0000822416,bloomberg
+PNC,PNC Financial Services Group,PNC US Equity,PNC US Equity,PNC US Equity,0000713676,bloomberg,0000713676,bloomberg,0000713676,bloomberg
+PRU,Prudential Financial Inc,PRU US Equity,PRU US Equity,PRU US Equity,0001137774,bloomberg,0001137774,bloomberg,0001137774,bloomberg
+R,Ryder System Inc,R US Equity,R US Equity,R US Equity,0000085961,bloomberg,0000085961,bloomberg,0000085961,bloomberg
+RCL,Royal Caribbean Cruises Ltd,RCL US Equity,RCL US Equity,RCL US Equity,0000884887,bloomberg,0000884887,bloomberg,0000884887,bloomberg
+RDN,Radian Group Inc,RDN US Equity,RDN US Equity,RDN US Equity,0000890926,bloomberg,0000890926,bloomberg,0000890926,bloomberg
+RTX,RTX Corp,RTX US Equity,RTX US Equity,RTX US Equity,0000101829,bloomberg,0000101829,bloomberg,0000101829,bloomberg
+SBC,AT&T Inc,T US Equity,T US Equity,T US Equity,0000732717,bloomberg,0000732717,bloomberg,0000732717,bloomberg
+SHW,Sherwin-Williams Co/The,SHW US Equity,SHW US Equity,SHW US Equity,0000089800,bloomberg,0000089800,bloomberg,0000089800,bloomberg
+SO,Southern Co/The,SO US Equity,SO US Equity,SO US Equity,0000092122,bloomberg,0000092122,bloomberg,0000092122,bloomberg
+SPG,Simon Property Group LP,12968Z US Equity,SPG US Equity,SPG US Equity,0001022344,bloomberg,0001063761,bloomberg,0001063761,bloomberg
+SRE,Sempra,SRE US Equity,SRE US Equity,SRE US Equity,0001032208,bloomberg,0001032208,bloomberg,0001032208,bloomberg
+TGT,Target Corp,TGT US Equity,TGT US Equity,TGT US Equity,0000027419,bloomberg,0000027419,bloomberg,0000027419,bloomberg
+TMUS,T-Mobile USA Inc,166783Q US Equity,DTE GR Equity,TMUS US Equity,0001578078,bloomberg,0000946770,bloomberg,0001283699,bloomberg
+TOL,Toll Brothers Inc,TOL US Equity,TOL US Equity,TOL US Equity,0000794170,bloomberg,0000794170,bloomberg,0000794170,bloomberg
+TRP,TransCanada PipeLines Ltd,559242Z CN Equity,TRP CN Equity,TRP US Equity,0000099070,bloomberg,0001232384,bloomberg,0001232384,bloomberg
+TSN,Tyson Foods Inc,TSN US Equity,TSN US Equity,TSN US Equity,0000100493,bloomberg,0000100493,bloomberg,0000100493,bloomberg
+UNH,UnitedHealth Group Inc,UNH US Equity,UNH US Equity,UNH US Equity,0000731766,bloomberg,0000731766,bloomberg,0000731766,bloomberg
+UNP,Union Pacific Corp,UNP US Equity,UNP US Equity,UNP US Equity,0000100885,bloomberg,0000100885,bloomberg,0000100885,bloomberg
+UPS,United Parcel Service Inc,UPS US Equity,UPS US Equity,UPS US Equity,0001090727,bloomberg,0001090727,bloomberg,0001090727,bloomberg
+VLO,Valero Energy Corp,VLO US Equity,VLO US Equity,VLO US Equity,0001035002,bloomberg,0001035002,bloomberg,0001035002,bloomberg
+VZ,Verizon Communications Inc,VZ US Equity,VZ US Equity,VZ US Equity,0000732712,bloomberg,0000732712,bloomberg,0000732712,bloomberg
+WMB,Williams Cos Inc/The,WMB US Equity,WMB US Equity,WMB US Equity,0000107263,bloomberg,0000107263,bloomberg,0000107263,bloomberg
+WMT,Walmart Inc,WMT US Equity,WMT US Equity,WMT US Equity,0000104169,bloomberg,0000104169,bloomberg,0000104169,bloomberg
+WY,Weyerhaeuser Co,WY US Equity,WY US Equity,WY US Equity,0000106535,bloomberg,0000106535,bloomberg,0000106535,bloomberg
+BRK,Berkshire Hathaway Inc,BRK/A US Equity,BRK/A US Equity,BRK/A US Equity,0001067983,bloomberg,0001067983,bloomberg,0001067983,bloomberg
+HES,Hess Corp,HES US Equity,CVX US Equity,CVX US Equity,0000004447,bloomberg,0000093410,bloomberg,0000093410,bloomberg
+LTR,Loews Corp,L US Equity,L US Equity,L US Equity,0000060086,bloomberg,0000060086,bloomberg,0000060086,bloomberg
+MDC,Sekisui House US Inc,MDC US Equity,1928 JP Equity,,0000773141,bloomberg,0001132527,bloomberg,,
+NRUC,National Rural Utilities Coo,2381A US Equity,2381A US Equity,,0000070502,bloomberg,0000070502,bloomberg,,
+NSC,Norfolk Southern Corp,NSC US Equity,NSC US Equity,NSC US Equity,0000702165,bloomberg,0000702165,bloomberg,0000702165,bloomberg
+PKG,Packaging Corp of America,PKG US Equity,PKG US Equity,PKG US Equity,0000075677,bloomberg,0000075677,bloomberg,0000075677,bloomberg
+TECK,Teck Resources Ltd,TECK/B CN Equity,TECK/B CN Equity,TECK US Equity,0000886986,bloomberg,0000886986,bloomberg,0000886986,bloomberg
+SPCX,Space Exploration Technologi,SPCX US Equity,SPCX US Equity,SPCX US Equity,0001181412,bloomberg,0001181412,bloomberg,0001181412,bloomberg
+AALLN,Anglo American PLC,AAL LN Equity,AAL LN Equity,NGLOY US Equity,0001088370,bloomberg,0001088370,bloomberg,0001088370,bloomberg
+ABIBB,Anheuser-Busch InBev SA/NV,ABI BB Equity,ABI BB Equity,BUD US Equity,0001668717,bloomberg,0001668717,bloomberg,0001668717,bloomberg
+ACAFP,Credit Agricole SA,ACA FP Equity,4068781Z FP Equity,CRARY US Equity,0001191672,bloomberg,,,0001191672,bloomberg
+ACFP,Accor SA,AC FP Equity,AC FP Equity,ACCYY US Equity,0001049183,bloomberg,0001049183,bloomberg,0001049183,bloomberg
+ADENVX,Adecco Group AG,ADEN SW Equity,ADEN SW Equity,AHEXY US Equity,0001446251,bloomberg,0001446251,bloomberg,0001446251,bloomberg
+ADNA,Koninklijke Ahold Delhaize N,AD NA Equity,AD NA Equity,ADRNY US Equity,0000854499,bloomberg,0000854499,bloomberg,0000854499,bloomberg
+AIFP,Air Liquide SA,AI FP Equity,AI FP Equity,AIQUY US Equity,0001658392,bloomberg,0001658392,bloomberg,0001658392,bloomberg
+AIRFP,Airbus SE,AIR FP Equity,AIR FP Equity,EADSY US Equity,0001378580,bloomberg,0001378580,bloomberg,0001378580,bloomberg
+AKZANA,Akzo Nobel NV,AKZA NA Equity,AKZA NA Equity,AKZOY US Equity,0000003124,bloomberg,0000003124,bloomberg,0000003124,bloomberg
+ALOFP,Alstom SA,ALO FP Equity,ALO FP Equity,ALSMY US Equity,0001062066,bloomberg,0001062066,bloomberg,0001062066,bloomberg
+ALVGR,Allianz SE,ALV GR Equity,ALV GR Equity,ALIZY US Equity,0001127508,bloomberg,0001127508,bloomberg,0001127508,bloomberg
+ASSGEN,Generali,G IM Equity,G IM Equity,ARZGY US Equity,0001379235,bloomberg,0001379235,bloomberg,0001379235,bloomberg
+AVLN,Aviva PLC,AV/ LN Equity,AV/ LN Equity,AVVIY US Equity,0001140022,bloomberg,0001140022,bloomberg,0001140022,bloomberg
+AXASA,AXA SA,CS FP Equity,CS FP Equity,AXAHY US Equity,0000898427,bloomberg,0000898427,bloomberg,0000898427,bloomberg
+AZN,AstraZeneca PLC,AZN LN Equity,AZN LN Equity,AZN US Equity,0000901832,bloomberg,0000901832,bloomberg,0000901832,bloomberg
+BACR,Barclays PLC,BARC LN Equity,BARC LN Equity,BCS US Equity,0000312069,bloomberg,0000312069,bloomberg,0000312069,bloomberg
+BACRED,Mediobanca Banca di Credito,MB IM Equity,BMPS IM Equity,MDIBY US Equity,0001379481,bloomberg,0001002788,bloomberg,0001379481,bloomberg
+BALN,BAE Systems PLC,BA/ LN Equity,BA/ LN Equity,BAESY US Equity,0001230244,bloomberg,0001230244,bloomberg,0001230244,bloomberg
+BASGR,BASF SE,BAS GR Equity,BAS GR Equity,BASFY US Equity,0001024148,bloomberg,0001024148,bloomberg,0001024148,bloomberg
+BATSLN,British American Tobacco PLC,BATS LN Equity,BATS LN Equity,BTI US Equity,0001303523,bloomberg,0001303523,bloomberg,0001303523,bloomberg
+BAYNGR,Bayer AG,BAYN GR Equity,BAYN GR Equity,BAYRY US Equity,0001144145,bloomberg,0001144145,bloomberg,0001144145,bloomberg
+BBVASM,Banco Bilbao Vizcaya Argenta,BBVA SM Equity,BBVA SM Equity,BBVA US Equity,0001750460,bloomberg,0001750460,bloomberg,0001750460,bloomberg
+BERTEL,Bertelsmann SE & Co KGaA,BTG GR Equity,BTG GR Equity,,0001087051,bloomberg,0001087051,bloomberg,,
+BMW,Bayerische Motoren Werke AG,BMW GR Equity,BMW GR Equity,BMWKY US Equity,0001446250,bloomberg,0001446250,bloomberg,0001446250,bloomberg
+BNFP,Danone SA,BN FP Equity,BN FP Equity,DANOY US Equity,0001825471,bloomberg,0001825471,bloomberg,0001825471,bloomberg
+BNP,BNP Paribas SA,BNP FP Equity,BNP FP Equity,BNPQY US Equity,0001272025,bloomberg,0001272025,bloomberg,0001272025,bloomberg
+BPLN,BP PLC,BP/ LN Equity,BP/ LN Equity,BP US Equity,0000313807,bloomberg,0000313807,bloomberg,0000313807,bloomberg
+BRITEL,British Telecommunications L,58742Z LN Equity,BT/A LN Equity,BTGOF US Equity,0000820534,bloomberg,0000756620,bloomberg,0000756620,bloomberg
+CAFP,Carrefour SA,CA FP Equity,CA FP Equity,CRRFY US Equity,0001078642,bloomberg,0001078642,bloomberg,0001078642,bloomberg
+CARLB,Carlsberg Breweries A/S,303739Z DC Equity,CARLB DC Equity,CABGY US Equity,,,0001436647,bloomberg,0001436647,bloomberg
+CLNXSM,Cellnex Telecom SA,CLNX SM Equity,CLNX SM Equity,CLLNY US Equity,0001710727,bloomberg,0001710727,bloomberg,0001710727,bloomberg
+CMZB,Commerzbank AG,CBK GR Equity,CBK GR Equity,CRZBY US Equity,0000839463,bloomberg,0000839463,bloomberg,0000839463,bloomberg
+CNALN,Centrica PLC,CNA LN Equity,CNA LN Equity,CPYYY US Equity,0001034215,bloomberg,0001034215,bloomberg,0001034215,bloomberg
+CNH,CNH Industrial NV,CNH US Equity,CNH US Equity,CNH US Equity,0001567094,bloomberg,0001567094,bloomberg,0001567094,bloomberg
+CONGR,Continental AG,CON GR Equity,CON GR Equity,CTTAY US Equity,0000806914,bloomberg,0000806914,bloomberg,0000806914,bloomberg
+CPGLN,Compass Group PLC,CPG LN Equity,CPG LN Equity,CMPGY US Equity,0001091877,bloomberg,0001091877,bloomberg,0001091877,bloomberg
+DANBNK,Danske Bank A/S,DANSKE DC Equity,DANSKE DC Equity,DNKEY US Equity,0000800177,bloomberg,0000800177,bloomberg,0000800177,bloomberg
+DB,Deutsche Bank AG,DBK GR Equity,DBK GR Equity,DB US Equity,0001159508,bloomberg,0001159508,bloomberg,0001159508,bloomberg
+DGELN,Diageo PLC,DGE LN Equity,DGE LN Equity,DEO US Equity,0000835403,bloomberg,0000835403,bloomberg,0000835403,bloomberg
+DGFP,Vinci SA,DG FP Equity,DG FP Equity,VCISY US Equity,0001951716,bloomberg,0001951716,bloomberg,0001951716,bloomberg
+DT,Deutsche Telekom AG,DTE GR Equity,DTE GR Equity,DTEGY US Equity,0000946770,bloomberg,0000946770,bloomberg,0000946770,bloomberg
+EDF,Electricite de France SA,EDF FP Equity,223727Z FP Equity,,0001387438,bloomberg,,,,
+EDPPL,EDP SA,EDP PL Equity,EDP PL Equity,EDPFY US Equity,0001039610,bloomberg,0001039610,bloomberg,0001039610,bloomberg
+ELTLX,Electrolux AB,ELUXB SS Equity,ELUXB SS Equity,ELUXY US Equity,0000813810,bloomberg,0000813810,bloomberg,0000813810,bloomberg
+ENELIM,Enel SpA,ENEL IM Equity,ENEL IM Equity,ENLAY US Equity,0001096200,bloomberg,0001096200,bloomberg,0001096200,bloomberg
+ENFP,Bouygues SA,EN FP Equity,EN FP Equity,BOUYY US Equity,0001445475,bloomberg,0001445475,bloomberg,0001445475,bloomberg
+ENGIFP,Engie SA,ENGI FP Equity,ENGI FP Equity,ENGIY US Equity,0001243443,bloomberg,0001243443,bloomberg,0001243443,bloomberg
+ENIIM,Eni SpA,ENI IM Equity,ENI IM Equity,E US Equity,0001002242,bloomberg,0001002242,bloomberg,0001002242,bloomberg
+EOANGR,E.ON SE,EOAN GR Equity,EOAN GR Equity,EONGY US Equity,0001136808,bloomberg,0001136808,bloomberg,0001136808,bloomberg
+EQNR,Equinor ASA,EQNR NO Equity,1233Z NO Equity,EQNR US Equity,0001140625,bloomberg,,,0001140625,bloomberg
+FUMVFH,Fortum Oyj,FORTUM FH Equity,1306Z FH Equity,FOJCY US Equity,0001436740,bloomberg,,,0001436740,bloomberg
+GLENLN,Glencore International AG,1696Z SW Equity,GLEN LN Equity,GLNCY US Equity,0001032383,bloomberg,0001521365,bloomberg,0001521365,bloomberg
+GSK,GSK PLC,GSK LN Equity,GSK LN Equity,GSK US Equity,0001131399,bloomberg,0001131399,bloomberg,0001131399,bloomberg
+HANRUE,Hannover Rueck SE,HNR1 GR Equity,1782Z GR Equity,HVRRY US Equity,0001045919,bloomberg,,,0001045919,bloomberg
+HEIANA,Heineken NV,HEIA NA Equity,0308076D NA Equity,HEINY US Equity,0000789593,bloomberg,,,0000789593,bloomberg
+HEIGR,Heidelberg Materials AG,HEI GR Equity,HEI GR Equity,HEINY US Equity,0001400691,bloomberg,0001400691,bloomberg,0000789593,bloomberg
+HENKEL,Henkel AG & Co KGaA,HEN3 GR Equity,HEN3 GR Equity,HENKY US Equity,,,,,,
+HOLNSW,Holcim AG,HOLN SW Equity,HOLN SW Equity,HCMLY US Equity,,,,,,
+HOTGR,HOCHTIEF AG,HOT GR Equity,ACS SM Equity,HOCFF US Equity,0001450349,bloomberg,0001448375,bloomberg,0001450349,bloomberg
+HSBC,HSBC Holdings PLC,HSBA LN Equity,HSBA LN Equity,HSBC US Equity,0001089113,bloomberg,0001089113,bloomberg,0001089113,bloomberg
+IAGLN,International Consolidated A,IAG LN Equity,IAG LN Equity,ICAGY US Equity,0001505706,bloomberg,0001505706,bloomberg,0001505706,bloomberg
+IBESM,Iberdrola SA,IBE SM Equity,IBE SM Equity,IBDRY US Equity,0001360587,bloomberg,0001360587,bloomberg,0001360587,bloomberg
+IMBLN,Imperial Brands PLC,IMB LN Equity,IMB LN Equity,IMBBY US Equity,0001072670,bloomberg,0001072670,bloomberg,0001072670,bloomberg
+INTNED,ING Groep NV,INGA NA Equity,INGA NA Equity,ING US Equity,0001039765,bloomberg,0001039765,bloomberg,0001039765,bloomberg
+ISPIM,Intesa Sanpaolo SpA,ISP IM Equity,ISP IM Equity,ISNPY US Equity,0001374384,bloomberg,0001374384,bloomberg,0001374384,bloomberg
+ITVLN,ITV PLC,ITV LN Equity,ITV LN Equity,ITVPY US Equity,0001283708,bloomberg,0001283708,bloomberg,0001283708,bloomberg
+KERFP,Kering SA,KER FP Equity,KER FP Equity,PPRUY US Equity,0001445465,bloomberg,0001445465,bloomberg,0001445465,bloomberg
+KPN,Koninklijke KPN NV,KPN NA Equity,KPN NA Equity,KKPNY US Equity,0001001474,bloomberg,0001001474,bloomberg,0001001474,bloomberg
+LHAGR,Deutsche Lufthansa AG,LHA GR Equity,LHA GR Equity,DLAKY US Equity,0001049724,bloomberg,0001049724,bloomberg,0001049724,bloomberg
+LLOYDS,Lloyds Banking Group PLC,LLOY LN Equity,LLOY LN Equity,LYG US Equity,0001160106,bloomberg,0001160106,bloomberg,0001160106,bloomberg
+LOUDRE,Louis Dreyfus Co BV,0308213D NA Equity,1292916D LE Equity,,0001778266,bloomberg,,,,
+MARSPE,Marks & Spencer PLC,346186Z LN Equity,MKS LN Equity,MAKSY US Equity,,,0001428087,bloomberg,0001428087,bloomberg
+MBGGR,Mercedes-Benz Group AG,MBG GR Equity,MBG GR Equity,MBGYY US Equity,0001067318,bloomberg,0001067318,bloomberg,0001067318,bloomberg
+MCFP,LVMH Moet Hennessy Louis Vui,MC FP Equity,MC FP Equity,LVMUY US Equity,0001092261,bloomberg,0001092261,bloomberg,0001092261,bloomberg
+MTNA,ArcelorMittal SA,MT NA Equity,MT NA Equity,MT US Equity,0001243429,bloomberg,0001243429,bloomberg,0001243429,bloomberg
+MUNRE,Muenchener Rueckversicherung,MUV2 GR Equity,MUV2 GR Equity,MURGY US Equity,0001021268,bloomberg,0001021268,bloomberg,0001021268,bloomberg
+MWDP,Wendel SE,MF FP Equity,MF FP Equity,WNDLF US Equity,0001721938,bloomberg,0001721938,bloomberg,0001721938,bloomberg
+NESNVX,Nestle SA,NESN SW Equity,NESN SW Equity,NSRGY US Equity,0000792990,bloomberg,0000792990,bloomberg,0000792990,bloomberg
+NGGLN,National Grid PLC,NG/ LN Equity,NG/ LN Equity,NGG US Equity,0001004315,bloomberg,0001004315,bloomberg,0001004315,bloomberg
+NTGYSM,Naturgy Energy Group SA,NTGY SM Equity,NTGY SM Equity,GASNY US Equity,0001269920,bloomberg,0001269920,bloomberg,0001269920,bloomberg
+NWG,NatWest Group PLC,NWG LN Equity,NWG LN Equity,NWG US Equity,0000844150,bloomberg,0000844150,bloomberg,0000844150,bloomberg
+NXTLN,Next PLC,NXT LN Equity,NXT LN Equity,NXGPY US Equity,,,,,,
+ORAFP,Orange SA,ORA FP Equity,ORA FP Equity,ORANY US Equity,,,,,0001038143,sec_tickers
+PHIANA,Koninklijke Philips NV,PHIA NA Equity,PHIA NA Equity,PHG US Equity,0000313216,bloomberg,0000313216,bloomberg,0000313216,bloomberg
+PNLNA,PostNL NV,PNL NA Equity,PNL NA Equity,PSTNY US Equity,0001062573,bloomberg,0001062573,bloomberg,0001062573,bloomberg
+PRUFIN,Prudential PLC,PRU LN Equity,PRU LN Equity,PUK US Equity,0001116578,bloomberg,0001116578,bloomberg,0001116578,bloomberg
+PSON,Pearson PLC,PSON LN Equity,PSON LN Equity,PSO US Equity,0000938323,bloomberg,0000938323,bloomberg,0000938323,bloomberg
+PUBFP,Publicis Groupe SA,PUB FP Equity,PUB FP Equity,PUBGY US Equity,0001046940,bloomberg,0001046940,bloomberg,0001046940,bloomberg
+RABOBK,Cooperatieve Rabobank UA,RABO NA Equity,RABO NA Equity,,0001098062,bloomberg,0001098062,bloomberg,,
+REPSM,Repsol SA,REP SM Equity,REP SM Equity,REPYY US Equity,0000847838,bloomberg,0000847838,bloomberg,0000847838,bloomberg
+RIFP,Pernod Ricard SA,RI FP Equity,RI FP Equity,PRNDY US Equity,0000899108,bloomberg,0000899108,bloomberg,0000899108,bloomberg
+ROLLS,Rolls-Royce PLC,3631515Z LN Equity,RR/ LN Equity,RYCEY US Equity,,,0001649568,bloomberg,0001649568,bloomberg
+SANFP,Sanofi SA,SAN FP Equity,SAN FP Equity,SNY US Equity,0001121404,bloomberg,0001121404,bloomberg,0001121404,bloomberg
+SANTAN,Banco Santander SA,SAN SM Equity,SAN SM Equity,SAN US Equity,0001684125,bloomberg,0001684125,bloomberg,0001684125,bloomberg
+SGOFP,Cie de Saint-Gobain SA,SGO FP Equity,SGO FP Equity,CODYY US Equity,0001012037,bloomberg,0001012037,bloomberg,0001012037,bloomberg
+SHBASS,Svenska Handelsbanken AB,SHBA SS Equity,SHBA SS Equity,SVNLY US Equity,0001643792,bloomberg,0001643792,bloomberg,0001643792,bloomberg
+SHELLN,Shell PLC,SHEL LN Equity,SHEL LN Equity,SHEL US Equity,0001306965,bloomberg,0001306965,bloomberg,0001306965,bloomberg
+SIEGR,Siemens AG,SIE GR Equity,SIE GR Equity,SIEGY US Equity,0001135644,bloomberg,0001135644,bloomberg,0001135644,bloomberg
+SMURFIT KAPPA,Smurfit Kappa Acquisitions U,0291810D ID Equity,SW US Equity,SW US Equity,0002060537,bloomberg,0002005951,bloomberg,0002005951,bloomberg
+SOCGEN,Societe Generale SA,GLE FP Equity,GLE FP Equity,SCGLY US Equity,0001145665,bloomberg,0001145665,bloomberg,0001145665,bloomberg
+SOLBBB,Solvay SA,SOLB BB Equity,SOLB BB Equity,SLVYY US Equity,0000930826,bloomberg,0000930826,bloomberg,0000930826,bloomberg
+SRENVX,Swiss Reinsurance Co Ltd,RUKN VX Equity,SREN SW Equity,SSREY US Equity,0000315043,bloomberg,0001519921,bloomberg,0001519921,bloomberg
+SSELN,SSE PLC,SSE LN Equity,SSE LN Equity,SSEZY US Equity,0000877024,bloomberg,0000877024,bloomberg,0000877024,bloomberg
+STANLN,Standard Chartered PLC,STAN LN Equity,STAN LN Equity,SCBFY US Equity,,,,,,
+STERV,Stora Enso Oyj,STERV FH Equity,STERV FH Equity,SEOAY US Equity,0001107458,bloomberg,0001107458,bloomberg,0001107458,bloomberg
+STM,STMicroelectronics NV,STMPA FP Equity,STMPA FP Equity,STM US Equity,0000932787,bloomberg,0000932787,bloomberg,0000932787,bloomberg
+SWEDA,Swedbank AB,SWEDA SS Equity,SWEDA SS Equity,SWDBY US Equity,0001699973,bloomberg,0001699973,bloomberg,0001699973,bloomberg
+SWFP,Sodexo SA,SW FP Equity,SW FP Equity,SDXAY US Equity,0001169715,bloomberg,0001169715,bloomberg,0001169715,bloomberg
+TELEFO,Telefonica SA,TEF SM Equity,TEF SM Equity,TELFY US Equity,0000814052,bloomberg,0000814052,bloomberg,0000814052,bloomberg
+TELIAS,Telia Co AB,TELIA SS Equity,TELIA SS Equity,TLSNY US Equity,0001169870,bloomberg,0001169870,bloomberg,0001169870,bloomberg
+TELNO,Telenor ASA,TEL NO Equity,1233Z NO Equity,TELNY US Equity,0001126113,bloomberg,,,0001126113,bloomberg
+TKAAV,Telekom Austria AG,TKA AV Equity,AMXB MM Equity,TKMAF US Equity,0001127051,bloomberg,0001129137,bloomberg,0001127051,bloomberg
+TSCOLN,Tesco PLC,TSCO LN Equity,TSCO LN Equity,TSCDY US Equity,0000885834,bloomberg,0000885834,bloomberg,0000885834,bloomberg
+TTEFP,TotalEnergies SE,TTE FP Equity,TTE FP Equity,TTE US Equity,0000879764,bloomberg,0000879764,bloomberg,0000879764,bloomberg
+UBS,UBS Group AG,UBSG SW Equity,UBSG SW Equity,UBS US Equity,0001610520,bloomberg,0001610520,bloomberg,0001610520,bloomberg
+UCGIM,UniCredit SpA,UCG IM Equity,UCG IM Equity,UNCRY US Equity,0001160550,bloomberg,0001160550,bloomberg,0001160550,bloomberg
+UNANA,Unilever PLC,ULVR LN Equity,ULVR LN Equity,UL US Equity,0000217410,bloomberg,0000217410,bloomberg,0000217410,bloomberg
+URWFP,Unibail-Rodamco-Westfield SE,UL NA Equity,URW FP Equity,URMCY US Equity,0001453932,bloomberg,,,,
+UU PLC,United Utilities PLC,3133594Z LN Equity,UU/ LN Equity,UUGRY US Equity,,,0001440130,bloomberg,0001440130,bloomberg
+VIEFP,Veolia Environnement SA,VIE FP Equity,VIE FP Equity,VEOEY US Equity,0001160110,bloomberg,0001160110,bloomberg,0001160110,bloomberg
+VLVY,Volvo AB,VOLVB SS Equity,VOLVB SS Equity,VLVLY US Equity,0000753762,bloomberg,0000753762,bloomberg,0000753762,bloomberg
+VOD,Vodafone Group PLC,VOD LN Equity,VOD LN Equity,VOD US Equity,0000839923,bloomberg,0000839923,bloomberg,0000839923,bloomberg
+VW,Volkswagen AG,VOW GR Equity,VOW GR Equity,VWAGY US Equity,0000839772,bloomberg,0000839772,bloomberg,0000839772,bloomberg
+WPPLN,WPP 2005 Ltd,2785214Z LN Equity,WPP LN Equity,WPP US Equity,0001406528,bloomberg,0000806968,bloomberg,0000806968,bloomberg
+ZURNVX,Zuerich Versicherungs-Gesell,1010Q SW Equity,ZURN SW Equity,ZURVY US Equity,0000941199,bloomberg,0001127799,bloomberg,0001127799,bloomberg
+AEGON,Aegon Ltd,AGN NA Equity,AGN NA Equity,,0000769218,bloomberg,0000769218,bloomberg,,
+LDOIM,Leonardo SpA,LDO IM Equity,LDO IM Equity,FINMY US Equity,0001851267,bloomberg,0001851267,bloomberg,0001851267,bloomberg
+RTOLN,Rentokil Initial PLC,RTO LN Equity,RTO LN Equity,RTO US Equity,0000930157,bloomberg,0000930157,bloomberg,0000930157,bloomberg
+SW,Smurfit Kappa Funding DAC,137514Z ID Equity,SW US Equity,SW US Equity,0001207316,bloomberg,0002005951,bloomberg,0002005951,bloomberg
+VIVFP,Vivendi SE,VIV FP Equity,VIV FP Equity,VIVHY US Equity,0001071986,bloomberg,0001071986,bloomberg,0001071986,bloomberg
+FMCC,Ford Motor Credit Co LLC,F1 US Equity,F US Equity,F US Equity,0000038009,bloomberg,0000037996,bloomberg,0000037996,bloomberg
+ACCINV,Essendi SA,1581936D LX Equity,1581936D LX Equity,,,,,,,
+ADRBID,United Group BV,0891540D NA Equity,2496Z LN Equity,,,,0001709681,bloomberg,,
+AFFP,Air France-KLM,AF FP Equity,AF FP Equity,AFLYY US Equity,0001110452,bloomberg,0001110452,bloomberg,0001110452,bloomberg
+AGKLN,Albion Financing 1 SARL,2570234D LX Equity,2085183D LN Equity,,,,,,,
+ARWLN,Sherwood Financing PLC,1934935D LN Equity,277924Z LN Equity,,,,0001408159,bloomberg,,
+ASSDLN,Bellis Acquisition Co PLC,1858388D LN Equity,277924Z LN Equity,,,,0001408159,bloomberg,,
+ATLIM,Mundys SpA,ATL IM Equity,3284233Z IM Equity,,0001437775,bloomberg,,,,
+BOPRLN,Boparan Finance PLC,0230895D LN Equity,0090409D LN Equity,,,,,,,
+BRSL,Brightstar Lottery PLC,BRSL US Equity,BRSL US Equity,BRSL US Equity,0001619762,bloomberg,0001619762,bloomberg,0001619762,bloomberg
+CABBCO,Monitchem HoldCo 3 SA,1002232D LX Equity,2299170D LX Equity,,,,,,,
+CCK,Crown European Holdings SACA,JJ FP Equity,CCK US Equity,CCK US Equity,,,0001219601,bloomberg,0001219601,bloomberg
+CECGR,CECONOMY AG,CEC GR Equity,CEC GR Equity,MTTRY US Equity,0001437143,bloomberg,0001437143,bloomberg,0001437143,bloomberg
+CEETRU,New Immo Holding SA,1644845D FP Equity,1621578D FP Equity,,,,,,,
+CHEPDE,Cheplapharm Arzneimittel Gmb,0159055D GR Equity,2263990D GR Equity,,,,,,,
+CMACG,CMA CGM SA,144898Z FP Equity,2410240D FP Equity,,0001443675,bloomberg,,,,
+CPIPGR,CPI Property Group SA,O5G GR Equity,O5G GR Equity,0NWQ LN Equity,,,,,,
+CSTM,Constellium SE,CSTM US Equity,CSTM US Equity,CSTM US Equity,0001563411,bloomberg,0001563411,bloomberg,0001563411,bloomberg
+DUFNSW,Dufry One BV,1544853D NA Equity,AVOL SW Equity,,,,0001546354,bloomberg,,
+EGBLFN,EG Global Finance PLC,1712546D LN Equity,1713980D JY Equity,,,,,,,
+EOFP,Forvia SE,FRVIA FP Equity,FRVIA FP Equity,FURCF US Equity,0001559444,bloomberg,0001559444,bloomberg,0001559444,bloomberg
+ERICB,Telefonaktiebolaget LM Erics,ERICB SS Equity,ERICB SS Equity,ERIC US Equity,0000717826,bloomberg,0000717826,bloomberg,0000717826,bloomberg
+ETLFP,Eutelsat SA,3630219Z FP Equity,ETL FP Equity,ETCMY US Equity,,,0001534294,bloomberg,0001534294,bloomberg
+FIBCOP,Fibercop SpA,1960591D IM Equity,2550083D US Equity,,,,,,,
+FRFP,Valeo SE,FR FP Equity,FR FP Equity,VLEEY US Equity,0000922486,bloomberg,0000922486,bloomberg,0000922486,bloomberg
+GRFSM,Grifols SA,GRF SM Equity,GRF SM Equity,GRFS US Equity,0001438569,bloomberg,0001438569,bloomberg,0001438569,bloomberg
+HPLGR,Hapag-Lloyd AG,HLAG GR Equity,HLAG GR Equity,HLAGF US Equity,0001661850,bloomberg,0001661850,bloomberg,0001661850,bloomberg
+ICELTD,Iceland Bondco PLC,1027732D LN Equity,1921875D LN Equity,,,,,,,
+ILIADH,Iliad Holding SAS,1990485D FP Equity,1861382D FP Equity,,,,,,,
+IMAIM,IMA Industria Macchine Autom,IMA IM Equity,1193352D IM Equity,,0001559469,bloomberg,,,,
+INEGRP,INEOS Finance PLC,8256927Z LN Equity,1547674D IO Equity,,,,,,,
+INWIM,Infrastrutture Wireless Ital,INW IM Equity,INW IM Equity,INW IM Equity,,,,,,
+IONPLA,ION Platform Finance SARL,2595883D LX Equity,1887106D LX Equity,,,,,,,
+IPGIM,Webuild SpA,WBD IM Equity,WBD IM Equity,IMPJY US Equity,0001437538,bloomberg,0001437538,bloomberg,0001437538,bloomberg
+LHMCFI,Cirsa Finance International,1628587D LX Equity,BX US Equity,,,,0001393818,bloomberg,,
+LORCAT,Kaixo Bondco Telecom SA,1922784D SM Equity,1990502D JY Equity,,,,,,,
+LOXAM,Loxam SAS,927976Z FP Equity,927976Z FP Equity,,,,,,,
+LTMCIM,Lottomatica Group Spa,LTMC IM Equity,LTMC IM Equity,,,,,,,
+LXSGR,LANXESS AG,LXS GR Equity,LXS GR Equity,LNXSY US Equity,0001311307,bloomberg,0001311307,bloomberg,0001311307,bloomberg
+MATTER,NJJ Continental SA,1260890D LX Equity,1222387D FP Equity,,,,,,,
+METSA,Metsa Board Oyj,METSB FH Equity,METSB FH Equity,,,,,,,
+MLTIVR,Multiversity SpA,1737507D IM Equity,2402551D IM Equity,,,,,,,
+MMBFP,Lagardere SA,MMB FP Equity,VIV FP Equity,,0000932215,bloomberg,0001071986,bloomberg,,
+NEXIIM,Nexi SpA,NEXI IM Equity,NEXI IM Equity,NEXXY US Equity,,,,,,
+NOKIA,Nokia Oyj,NOKIA FH Equity,NOKIA FH Equity,NOK US Equity,0000924613,bloomberg,0000924613,bloomberg,0000924613,bloomberg
+OI,OI European Group BV,0533860D NA Equity,OI US Equity,OI US Equity,,,0000812074,bloomberg,0000812074,bloomberg
+OPALBD,Opal Bidco SAS,2559528D FP Equity,2560846D FP Equity,,,,,,,
+PFDLN,Premier Foods Finance PLC,0962638D LN Equity,PFD LN Equity,PRRFY US Equity,,,0001446252,bloomberg,0001446252,bloomberg
+PICSUR,Picard Bondco SA,0307033D LX Equity,1837443D FP Equity,,,,,,,
+PPCGA,Public Power Corp SA,PPC GA Equity,PPC GA Equity,PUPOF US Equity,,,,,,
+QPARKH,Q-Park Holding I BV,1781501D NA Equity,KKR US Equity,,,,0001404912,bloomberg,,
+RENAUL,Renault SA,RNO FP Equity,RNO FP Equity,RNLSY US Equity,0001416039,bloomberg,0001416039,bloomberg,0001416039,bloomberg
+RXLFP,Rexel SA,RXL FP Equity,RXL FP Equity,RXEEY US Equity,0000927795,bloomberg,0000927795,bloomberg,0000927795,bloomberg
+SAZGR,Nidda Healthcare Holding Gmb,1507854D GR Equity,1538965D LX Equity,,,,,,,
+SAZKAG,Allwyn Entertainment Financi,1988284D LN Equity,2457254D LE Equity,,,,,,,
+SBBBSS,Samhallsbyggnadsbolaget i No,SBBB SS Equity,SBBB SS Equity,SBBB SS Equity,,,,,,
+SESGFP,SES SA,SESG FP Equity,SESG FP Equity,SGBAF US Equity,,,,,0001347408,sec_tickers
+SHAEFF,Schaeffler AG,SHA0 GR Equity,42386Z GR Equity,SFFLY US Equity,0001713675,bloomberg,,,0001713675,bloomberg
+SPMIM,Saipem Finance International,1416687D NA Equity,SPM IM Equity,SAPMY US Equity,,,0001181702,bloomberg,0001181702,bloomberg
+STENA,Stena AB,1081Z SS Equity,1081Z SS Equity,,0001003517,bloomberg,0001003517,bloomberg,,
+STLA,Stellantis NV,STLA US Equity,STLA US Equity,STLA US Equity,0001605484,bloomberg,0001605484,bloomberg,0001605484,bloomberg
+STYRO,INEOS Quattro Finance 2 Plc,1860511D LN Equity,1547674D IO Equity,,,,,,,
+SUNN,Sunrise HoldCo IV BV,3590264Z NA Equity,SUNN SW Equity,SUNN SW EQUITY,,,0002021938,bloomberg,0002021938,bloomberg
+SZUGR,Suedzucker AG,SZU GR Equity,0771776D GR Equity,SUEZF US Equity,0001450342,bloomberg,,,0001450342,bloomberg
+TITANL,TeamSystem SpA,395985Z IM Equity,6902Z US Equity,,,,0001462335,bloomberg,,
+TITIM,Telecom Italia SpA/Milano,TIT IM Equity,TIT IM Equity,TIIAY US Equity,0000948642,bloomberg,0000948642,bloomberg,0000948642,bloomberg
+TTMTIN,Jaguar Land Rover Automotive,8291453Z LN Equity,TMPV IN Equity,,,,0000926042,bloomberg,,
+TUICRU,TUI Cruises GmbH,2309391Z GR Equity,2309391Z GR Equity,,,,,,,
+TUIGR,TUI AG,TUI1 GR Equity,TUI1 GR Equity,TUIFF US Equity,0001342875,bloomberg,0001342875,bloomberg,0001342875,bloomberg
+VERISR,Verisure Midholding AB,1333653D SS Equity,VSURE SS Equity,,,,0002094692,bloomberg,,
+VMED,Virgin Media Finance PLC,780994Z LN Equity,1828288D LN Equity,,0001322799,bloomberg,,,,
+VOVCAB,Volvo Car AB,VOLCARB SS Equity,GEELZ CH Equity,VLVOF US Equity,,,,,,
+WLNFP,Worldline SA/France,WLN FP Equity,WLN FP Equity,WRDLY US Equity,0001665531,bloomberg,0001665531,bloomberg,0001665531,bloomberg
+ZEGLN,Zegona Finance PLC,2456896D LN Equity,ZEG LN Equity,,,,,,,
+ZFFNGR,ZF Europe Finance BV,1667143D NA Equity,0296891D GR Equity,,,,,,,
+ZIGGO,Ziggo Bond Co BV,0209630D NA Equity,LBTYA US Equity,,,,0001570585,bloomberg,,
+ADLERR,ADLER Real Estate GmbH,ADL GR Equity,ADJ GR Equity,,,,0001797027,bloomberg,,
+ALTICE,Altice Finco SA,0628683D LX Equity,1412575D LX Equity,,,,0001709662,bloomberg,,
+ARGID,Ardagh Packaging Finance PLC,0121101D LN Equity,8230501Z LX Equity,,,,,,,
+BELRON,Belron UK Finance PLC,2483143D LN Equity,DIE BB Equity,,,,0001450282,bloomberg,,
+CITCON,Citycon Treasury BV,1068684D NA Equity,NSTR IT Equity,,,,,,,
+CLNVX,Clariant AG,CLN SW Equity,CLN SW Equity,CLZNY US Equity,0001366235,bloomberg,0001366235,bloomberg,0001366235,bloomberg
+CWCFIN,C&W Senior Finance Ltd,2229274D KY Equity,LILA US Equity,LILA US Equity,,,0001712184,bloomberg,0001712184,bloomberg
+ELISGP,Elis SA,ELIS FP Equity,ELIS FP Equity,ELSSF US Equity,,,,,0002127861,sec_tickers
+ELOFR,ELO SACA,211642Z FP Equity,1621578D FP Equity,,,,,,,
+ENAPHO,EP Infrastructure AS,0943417D CP Equity,1560021D CP Equity,,,,0001811717,bloomberg,,
+FTI,TechnipFMC PLC,FTI US Equity,FTI US Equity,FTI US Equity,0001681459,bloomberg,0001681459,bloomberg,0001681459,bloomberg
+MERLLN,Motion Bondco DAC,1758473D ID Equity,1758903D LN Equity,,,,,,,
+PPFTEL,e& PPF Telecom Group BV,1608095D NA Equity,3344698Z UH Equity,,,,,,,
+ROSINI,Rossini Sarl,1658792D LX Equity,CVC NA Equity,,,,0002093695,bloomberg,,
+SFRFP,Altice France SA,SFR FP Equity,1412575D LX Equity,,,,0001709662,bloomberg,,
+SYNNVX,Syngenta AG,SYNN SW Equity,PRCH CH Equity,,0001123661,bloomberg,0000909321,bloomberg,,
+TCHEN,Techem Verwaltungsgesellscha,1630659D GR Equity,PGHN SW Equity,,,,0001534259,bloomberg,,
+THYELE,TK Elevator Holdco GmbH,1810401D GR Equity,13620Z US Equity,,,,0000939424,bloomberg,,
+TKAGR,thyssenkrupp AG,TKA GR Equity,TKA GR Equity,TKAMY US Equity,0001437198,bloomberg,0001437198,bloomberg,0001437198,bloomberg
+TMO,Thermo Fisher Scientific Inc,TMO US Equity,TMO US Equity,TMO US Equity,0000097745,bloomberg,0000097745,bloomberg,0000097745,bloomberg
+NVDA,NVIDIA Corp,NVDA US Equity,NVDA US Equity,NVDA US Equity,0001045810,bloomberg,0001045810,bloomberg,0001045810,bloomberg
+MYTIL,Metlen Energy & Metals SA,MYTIL GA Equity,MTLN LN Equity,MTLN GA Equity,,,0002090231,bloomberg,0002090231,bloomberg
+ACI,Albertsons Cos Inc,ACI US Equity,ACI US Equity,ACI US Equity,0001646972,bloomberg,0001646972,bloomberg,0001646972,bloomberg
+BLDR,Builders FirstSource Inc,BLDR US Equity,BLDR US Equity,BLDR US Equity,0001316835,bloomberg,0001316835,bloomberg,0001316835,bloomberg
+DTV,Directv Financing LLC,1901738D US Equity,TPG US Equity,,,,0001880661,bloomberg,,
+EA,OAK-Eagle Acquireco Inc,2640201D US Equity,2640201D US Equity,,,,,,,
+NXST,Nexstar Media Inc,33004Z US Equity,NXST US Equity,NXST US Equity,0001142125,bloomberg,0001142417,bloomberg,0001142417,bloomberg
+SOLEIN,Olympus Water US Holding Cor,1917095D US Equity,21380Z US Equity,,,,0001228754,bloomberg,,
+TLN,Talen Energy Supply LLC,48835Z US Equity,TLN US Equity,TLN US Equity,0001161976,bloomberg,0001622536,bloomberg,0001622536,bloomberg
+APACHE,Apache Corp,9990302D US Equity,APA US Equity,,0000006769,bloomberg,0001841666,bloomberg,,
+FSA,Assured Guaranty Municipal C,16994Z US Equity,AGO US Equity,,0002027019,bloomberg,0001273813,bloomberg,,
+MAR,Marriott International Inc/M,MAR US Equity,MAR US Equity,,0001048286,bloomberg,0001048286,bloomberg,,
+COFB,Capital One Bank USA NA,8125Z US Equity,COF US Equity,,0001003952,bloomberg,0000927628,bloomberg,,
+CHUBB,Chubb Ltd,CB US Equity,CB US Equity,,0000896159,bloomberg,0000896159,bloomberg,,
+EIDP,EIDP Inc,1715651D US Equity,CTVA US Equity,,0000030554,bloomberg,0001755672,bloomberg,,
+NGLS,Targa Resources Partners LP,NGLS US Equity,TRGP US Equity,,0001379661,bloomberg,0001389170,bloomberg,,
+UBER,Uber Technologies Inc,UBER US Equity,UBER US Equity,,0001543151,bloomberg,0001543151,bloomberg,,
+STAR,Safehold Inc,SAFE US Equity,SAFE US Equity,,0001095651,bloomberg,0001095651,bloomberg,,
+MGIC,MGIC Investment Corp,MTG US Equity,MTG US Equity,,0000876437,bloomberg,0000876437,bloomberg,,
+UNITI,Uniti Group Inc,UNIT US Equity,UNIT US Equity,,0002020795,sec_tickers,0002020795,sec_tickers,,
+AR,Antero Resources Corp,AR US Equity,AR US Equity,,0001433270,bloomberg,0001433270,bloomberg,,
+EQM,EQM Midstream Partners LP,EQM US Equity,EQT US Equity,,0001540947,bloomberg,0000033213,bloomberg,,
+HWM,Howmet Aerospace Inc,HWM US Equity,HWM US Equity,,0000004281,bloomberg,0000004281,bloomberg,,
+BMCAUS B,Standard Industries Inc,0713150D US Equity,0205869D US Equity,,,,0001700785,bloomberg,,
+TSLA,Tesla Inc,TSLA US Equity,TSLA US Equity,,0001318605,bloomberg,0001318605,bloomberg,,
+ARM,Meritor Inc,MTOR US Equity,CMI US Equity,,0001113256,bloomberg,0000026172,bloomberg,,
+MERLLN B,Motion Finco Sarl,1738435D LX Equity,1758903D LN Equity,,,,,,,
+CIVI,Civitas Resources Inc,CIVI US Equity,SM US Equity,SM US Equity,0001509589,bloomberg,0000893538,bloomberg,0000893538,bloomberg
+COF A,Capital One NA,1918Z US Equity,COF US Equity,,0000047288,bloomberg,0000927628,bloomberg,,
+DUK,Duke Energy Carolinas LLC,3668909Z US Equity,DUK US Equity,,0000030371,bloomberg,0001326160,bloomberg,,
+PXD,Pioneer Natural Resources Co,PXD US Equity,XOM US Equity,,0001038357,bloomberg,0002115436,bloomberg,,
+ILDFP,Maya SAS/Paris France,1861382D FP Equity,1861382D FP Equity,,,,,,,
+MLTIVR A,Pachelbel Bidco SpA,2444094D IM Equity,2402551D IM Equity,,,,,,,
+INEOS_H,INEOS Group Holdings SA,0507076D LN Equity,1547674D IO Equity,,,,,,,
+GKNLN,GKN Holdings Ltd,504253Z LN Equity,MRO LN Equity,,,,,,,
+NVFVES,Novafives SAS,1009308D FP Equity,1963713D FP Equity,,,,,,,
+FREGR,Fresenius SE & Co KGaA,FRE GR Equity,FRE GR Equity,,0000904868,bloomberg,0000904868,bloomberg,,
+TVOYFH,Teollisuuden Voima Oyj,TVOY FH Equity,UPM FH Equity,,,,0001089642,bloomberg,,
+AQUASM,FCC Aqualia SA,0468005D SM Equity,1223677D MM Equity,,,,,,,
+TDC,TDC Holding A/S,TDC LI Equity,1583731D DC Equity,,0001605975,bloomberg,,,,
+ATOSTR,Autostrade per l'Italia SpA,3653719Z IM Equity,2103Z IM Equity,,,,,,,
+CWLN,Cable & Wireless Ltd,3584977Z LN Equity,LILA US Equity,,0000924954,bloomberg,0001712184,bloomberg,,
+NJJ_HLD,NJJ Continental Holding SA,1260891D LX Equity,1222387D FP Equity,,,,,,,
+ORANOF,Orano SA,1464127D FP Equity,223727Z FP Equity,,,,,,,
+GALPPL,Galp Energia SGPS SA,GALP PL Equity,GALP PL Equity,,0001385535,bloomberg,0001385535,bloomberg,,
+REELN,RELX PLC,REL LN Equity,REL LN Equity,,0000929869,bloomberg,0000929869,bloomberg,,
+DHLGR,DHL AG,DHL GR Equity,DHL GR Equity,,,,,,,
+DSFIR,DSM BV,DSM NA Equity,DSFIR NA Equity,,0001451278,bloomberg,,,,
+SKYLN,Sky Ltd,SKY LN Equity,CMCSA US Equity,,0001809270,bloomberg,0001166691,bloomberg,,
+CSAG,Credit Suisse Group AG,CSGN SW Equity,UBSG SW Equity,,0001159510,bloomberg,0001610520,bloomberg,,
+EDPFIN,EDP Finance BV,1403Z NA Equity,EDP PL Equity,,,,0001039610,bloomberg,,
+ENERGIE,EnBW Energie Baden-Wuerttemb,EBK GR Equity,EBK GR Equity,,,,,,,
+UNANA B,Unilever Finance Netherlands,1850699D NA Equity,ULVR LN Equity,,0001985266,bloomberg,0000217410,bloomberg,,
+MLFP,Cie Financiere Michelin SA,MIC SW Equity,ML FP Equity,,,,0000896076,bloomberg,,
+,,,,,,,,,,
